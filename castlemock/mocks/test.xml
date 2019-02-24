@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soapExportContainer>
+    <mockResponses>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://servicios.avianca.com/types/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:consultarVueloResponseElement&gt;?&lt;/web:consultarVueloResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>ngoP7l</id>
+            <name>Auto-generated mocked response</name>
+            <operationId>y1xKn9</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://servicios.avianca.com/types/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:reservarVueloResponseElement&gt;?&lt;/web:reservarVueloResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>Amcsns</id>
+            <name>Auto-generated mocked response</name>
+            <operationId>l11tkt</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+    </mockResponses>
+    <operations>
+        <operation>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultBody>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://servicios.avianca.com/types/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:consultarVueloResponseElement&gt;?&lt;/web:consultarVueloResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</defaultBody>
+            <forwardedEndpoint>http://192.168.1.100:8888/TuresBalonProviders-Avianca-context-root/ServicioAviancaVuelosSoapHttpPort</forwardedEndpoint>
+            <httpMethod>POST</httpMethod>
+            <id>y1xKn9</id>
+            <identifyStrategy>ELEMENT_NAMESPACE</identifyStrategy>
+            <mockOnFailure>false</mockOnFailure>
+            <mockResponses/>
+            <name>consultarVuelo</name>
+            <networkDelay>0</networkDelay>
+            <operationIdentifier>
+                <name>consultarVueloElement</name>
+                <namespace>http://servicios.avianca.com/types/</namespace>
+            </operationIdentifier>
+            <originalEndpoint>http://192.168.1.100:8888/TuresBalonProviders-Avianca-context-root/ServicioAviancaVuelosSoapHttpPort</originalEndpoint>
+            <portId>iRhtO8</portId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <soapVersion>SOAP11</soapVersion>
+            <status>MOCKED</status>
+        </operation>
+        <operation>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultBody>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://servicios.avianca.com/types/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:reservarVueloResponseElement&gt;?&lt;/web:reservarVueloResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</defaultBody>
+            <forwardedEndpoint>http://192.168.1.100:8888/TuresBalonProviders-Avianca-context-root/ServicioAviancaVuelosSoapHttpPort</forwardedEndpoint>
+            <httpMethod>POST</httpMethod>
+            <id>l11tkt</id>
+            <identifyStrategy>ELEMENT_NAMESPACE</identifyStrategy>
+            <mockOnFailure>false</mockOnFailure>
+            <mockResponses/>
+            <name>reservarVuelo</name>
+            <networkDelay>0</networkDelay>
+            <operationIdentifier>
+                <name>reservarVueloElement</name>
+                <namespace>http://servicios.avianca.com/types/</namespace>
+            </operationIdentifier>
+            <originalEndpoint>http://192.168.1.100:8888/TuresBalonProviders-Avianca-context-root/ServicioAviancaVuelosSoapHttpPort</originalEndpoint>
+            <portId>iRhtO8</portId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <soapVersion>SOAP11</soapVersion>
+            <status>MOCKED</status>
+        </operation>
+    </operations>
+    <ports>
+        <port>
+            <id>iRhtO8</id>
+            <name>ServicioAviancaVuelosSoapHttpPort</name>
+            <operations/>
+            <projectId>n8gf4X</projectId>
+            <uri>ServicioAviancaVuelosSoapHttpPort</uri>
+        </port>
+    </ports>
+    <project>
+        <created>2019-02-21T18:59:57.994Z</created>
+        <description></description>
+        <id>n8gf4X</id>
+        <name>AES_PICA_Mock_Avianca</name>
+        <updated>2019-02-21T18:59:57.994Z</updated>
+        <ports/>
+        <resources/>
+    </project>
+    <resources>
+        <resource>
+            <content>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://servicios.avianca.com/" xmlns:tns0="http://servicios.avianca.com/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioAviancaVuelos" targetNamespace="http://servicios.avianca.com/"&gt;
+        
+    &lt;types&gt;
+                
+        &lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://servicios.avianca.com/types/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://servicios.avianca.com/types/"&gt;
+                        
+            &lt;complexType name="Vuelo"&gt;
+                                
+                &lt;sequence&gt;
+                                        
+                    &lt;element name="fechaSalida" nillable="true" type="dateTime"/&gt;
+                                        
+                    &lt;element name="fechaLlegada" nillable="true" type="dateTime"/&gt;
+                                        
+                    &lt;element name="ciudadOrigen" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="vuelo" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="clase" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="ciudadDestino" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="precio" nillable="true" type="long"/&gt;
+                                    
+                &lt;/sequence&gt;
+                            
+            &lt;/complexType&gt;
+                        
+            &lt;element name="consultarVueloElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="ciudadOrigen" nillable="true" type="string"/&gt;
+                                                
+                        &lt;element name="ciudadDestino" nillable="true" type="string"/&gt;
+                                                
+                        &lt;element name="fechaSalida" nillable="true" type="dateTime"/&gt;
+                                                
+                        &lt;element name="clase" nillable="true" type="string"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="consultarVueloResponseElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element maxOccurs="unbounded" minOccurs="0" name="result" nillable="true" type="tns:Vuelo"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="reservarVueloElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="vuelo" nillable="true" type="tns:Vuelo"/&gt;
+                                                
+                        &lt;element name="nombrePasajero" nillable="true" type="string"/&gt;
+                                                
+                        &lt;element name="numeroIdentidadPasajero" nillable="true" type="int"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="reservarVueloResponseElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="result" type="boolean"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                    
+        &lt;/schema&gt;
+            
+    &lt;/types&gt;
+        
+    &lt;message name="ServicioAviancaVuelos_consultarVuelo"&gt;
+                
+        &lt;part element="tns0:consultarVueloElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="ServicioAviancaVuelos_consultarVueloResponse"&gt;
+                
+        &lt;part element="tns0:consultarVueloResponseElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="ServicioAviancaVuelos_reservarVuelo"&gt;
+                
+        &lt;part element="tns0:reservarVueloElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="ServicioAviancaVuelos_reservarVueloResponse"&gt;
+                
+        &lt;part element="tns0:reservarVueloResponseElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;portType name="ServicioAviancaVuelos"&gt;
+                
+        &lt;operation name="consultarVuelo"&gt;
+                        
+            &lt;input message="tns:ServicioAviancaVuelos_consultarVuelo"/&gt;
+                        
+            &lt;output message="tns:ServicioAviancaVuelos_consultarVueloResponse"/&gt;
+                    
+        &lt;/operation&gt;
+                
+        &lt;operation name="reservarVuelo"&gt;
+                        
+            &lt;input message="tns:ServicioAviancaVuelos_reservarVuelo"/&gt;
+                        
+            &lt;output message="tns:ServicioAviancaVuelos_reservarVueloResponse"/&gt;
+                    
+        &lt;/operation&gt;
+            
+    &lt;/portType&gt;
+        
+    &lt;binding name="ServicioAviancaVuelosSoapHttp" type="tns:ServicioAviancaVuelos"&gt;
+                
+        &lt;soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+                
+        &lt;operation name="consultarVuelo"&gt;
+                        
+            &lt;soap:operation soapAction="http://servicios.avianca.com//consultarVuelo"/&gt;
+                        
+            &lt;input&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/input&gt;
+                        
+            &lt;output&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/output&gt;
+                    
+        &lt;/operation&gt;
+                
+        &lt;operation name="reservarVuelo"&gt;
+                        
+            &lt;soap:operation soapAction="http://servicios.avianca.com//reservarVuelo"/&gt;
+                        
+            &lt;input&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/input&gt;
+                        
+            &lt;output&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/output&gt;
+                    
+        &lt;/operation&gt;
+            
+    &lt;/binding&gt;
+        
+    &lt;service name="ServicioAviancaVuelos"&gt;
+                
+        &lt;port binding="tns:ServicioAviancaVuelosSoapHttp" name="ServicioAviancaVuelosSoapHttpPort"&gt;
+                        
+            &lt;soap:address location="http://192.168.1.100:8888/TuresBalonProviders-Avianca-context-root/ServicioAviancaVuelosSoapHttpPort"/&gt;
+                    
+        &lt;/port&gt;
+            
+    &lt;/service&gt;
+    
+&lt;/definitions&gt;
+</content>
+            <id>OMAQut</id>
+            <name>Upload-2019-02-21-07-03-46.204</name>
+            <projectId>n8gf4X</projectId>
+            <type>WSDL</type>
+        </resource>
+    </resources>
+</soapExportContainer>

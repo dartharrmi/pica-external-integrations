@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soapExportContainer>
+    <mockResponses>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:searchFlightResponseElement&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;ECONOMY&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T17:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;250000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;false&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T15:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12345&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;ECONOMY&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T12:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;380000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T14:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12346&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;BUSINESS&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T18:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;845000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T20:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12347&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;BUSINESS&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-24T18:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;934000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-24T20:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12347&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+		&lt;/web:searchFlightResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>zPp1VM</id>
+            <name>Mock1_Search</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:searchFlightResponseElement&gt;&#13;
+		&lt;/web:searchFlightResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>82TKQp</id>
+            <name>Mock2_Search - Empty</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:searchFlightResponseElement&gt;&#13;
+			&#13;
+				&lt;web:cabin&gt;ECONOMY&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T17:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;250000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;false&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T15:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12345&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;ECONOMY&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T12:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;380000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T14:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12346&lt;/web:number&gt;&#13;
+			&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;BUSINESS&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T18:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;845000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T20:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12347&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;BUSINESS&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-24T18:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;934000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-24T20:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12347&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+		&lt;/web:searchFlightResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>kFGoAc</id>
+            <name>Mock3_Search - Malformed</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:searchFlightResponseElement&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;ECONOMY&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T17:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;250000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;false&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T15:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12345&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;ECONOMY&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T12:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;380000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T14:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12346&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;BUSINESS&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-23T18:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;845000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-23T20:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12347&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+			&lt;web:flights&gt;&#13;
+				&lt;web:cabin&gt;BUSINESS&lt;/web:cabin&gt;&#13;
+				&lt;web:arrivingDate&gt;2019-02-24T18:46:33Z&lt;/web:arrivingDate&gt;&#13;
+				&lt;web:price&gt;934000&lt;/web:price&gt;&#13;
+				&lt;web:arrivingCity&gt;BAQ&lt;/web:arrivingCity&gt;&#13;
+				&lt;web:meals&gt;true&lt;/web:meals&gt;&#13;
+				&lt;web:departinDate&gt;2019-02-24T20:46:33Z&lt;/web:departinDate&gt;&#13;
+				&lt;web:departinCity&gt;BOG&lt;/web:departinCity&gt;&#13;
+				&lt;web:number&gt;AA12347&lt;/web:number&gt;&#13;
+			&lt;/typ:flights&gt;&#13;
+		&lt;/web:searchFlightResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>azIjEh</id>
+            <name>Mock4_Search</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>IOZ7j0</id>
+            <name>Mock5_Search</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>OXtW3V</id>
+            <name>Mock6_Search</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>500</httpStatusCode>
+            <id>hSLWKz</id>
+            <name>Mock7_Search</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>Fuck you, PICA!</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>500</httpStatusCode>
+            <id>83nvrl</id>
+            <name>Mock8_Search</name>
+            <operationId>sjlw5A</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:bookFligthResponseElement&gt;&#13;
+			&lt;web:result&gt;true&lt;/web:result&gt;&#13;
+		&lt;/web:bookFligthResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>jzS4cn</id>
+            <name>Mock1_Book</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:bookFligthResponseElement&gt;&#13;
+			&lt;web:result&gt;true&lt;/web:result&gt;&#13;
+		&lt;/web:bookFligthResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>ubsrsS</id>
+            <name>Mock2_Book</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:bookFligthResponseElement&gt;&#13;
+			&lt;web:result&gt;false&lt;/web:result&gt;&#13;
+		&lt;/web:bookFligthResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>cxURLz</id>
+            <name>Mock3_Book - False</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:bookFligthResponseElement&gt;&#13;
+			&lt;web:result&gt;false&lt;/web:result&gt;&#13;
+		&lt;/web:bookFligthResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>JHHapC</id>
+            <name>Mock4_Book - False</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:bookFligthResponseElement&gt;&#13;
+			&lt;web:result&gt;false&lt;/ &gt;&#13;
+		&lt;/&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>IgmsFW</id>
+            <name>Mock5_Book - Malformed</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;&#13;
+   &lt;soapenv:Header/&gt;&#13;
+   &lt;soapenv:Body&gt;&#13;
+      &lt;web:bookFligthResponseElement&gt;?&lt;/:bookFligthResponseElement&gt;&#13;
+   &lt;/soapenv:&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>JnNiDv</id>
+            <name>Mock6_Book - Malformed</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>uXFISX</id>
+            <name>Mock7_Book</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>Q0knkc</id>
+            <name>Mock8_Book</name>
+            <operationId>MObVLY</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+    </mockResponses>
+    <operations>
+        <operation>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultBody>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:searchFlightResponseElement&gt;?&lt;/web:searchFlightResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</defaultBody>
+            <forwardedEndpoint>http://192.168.1.100:8888/TuresBalonProviders-AA-context-root/AAFlightsServiceSoapHttpPort</forwardedEndpoint>
+            <httpMethod>POST</httpMethod>
+            <id>sjlw5A</id>
+            <identifyStrategy>ELEMENT_NAMESPACE</identifyStrategy>
+            <mockOnFailure>false</mockOnFailure>
+            <mockResponses/>
+            <name>searchFlight</name>
+            <networkDelay>0</networkDelay>
+            <operationIdentifier>
+                <name>searchFlightElement</name>
+                <namespace>http://services.aa.com/types/</namespace>
+            </operationIdentifier>
+            <originalEndpoint>http://192.168.1.100:8888/TuresBalonProviders-AA-context-root/AAFlightsServiceSoapHttpPort</originalEndpoint>
+            <portId>WtiVWr</portId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <soapVersion>SOAP11</soapVersion>
+            <status>MOCKED</status>
+        </operation>
+        <operation>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultBody>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.aa.com/types/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:bookFligthResponseElement&gt;?&lt;/web:bookFligthResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</defaultBody>
+            <forwardedEndpoint>http://192.168.1.100:8888/TuresBalonProviders-AA-context-root/AAFlightsServiceSoapHttpPort</forwardedEndpoint>
+            <httpMethod>POST</httpMethod>
+            <id>MObVLY</id>
+            <identifyStrategy>ELEMENT_NAMESPACE</identifyStrategy>
+            <mockOnFailure>false</mockOnFailure>
+            <mockResponses/>
+            <name>bookFligth</name>
+            <networkDelay>0</networkDelay>
+            <operationIdentifier>
+                <name>bookFligthElement</name>
+                <namespace>http://services.aa.com/types/</namespace>
+            </operationIdentifier>
+            <originalEndpoint>http://192.168.1.100:8888/TuresBalonProviders-AA-context-root/AAFlightsServiceSoapHttpPort</originalEndpoint>
+            <portId>WtiVWr</portId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <soapVersion>SOAP11</soapVersion>
+            <status>MOCKED</status>
+        </operation>
+    </operations>
+    <ports>
+        <port>
+            <id>WtiVWr</id>
+            <name>AAFlightsServiceSoapHttpPort</name>
+            <operations/>
+            <projectId>zdWrWV</projectId>
+            <uri>AAFlightsServiceSoapHttpPort</uri>
+        </port>
+    </ports>
+    <project>
+        <created>2019-02-21T19:04:32.094Z</created>
+        <description></description>
+        <id>zdWrWV</id>
+        <name>AES_PICA_Mock_AA</name>
+        <updated>2019-02-21T19:04:32.094Z</updated>
+        <ports/>
+        <resources/>
+    </project>
+    <resources>
+        <resource>
+            <content>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://services.aa.com/" xmlns:tns0="http://services.aa.com/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AAFlightsService" targetNamespace="http://services.aa.com/"&gt;
+        
+    &lt;types&gt;
+                
+        &lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://services.aa.com/types/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://services.aa.com/types/"&gt;
+                        
+            &lt;complexType name="Flight"&gt;
+                                
+                &lt;sequence&gt;
+                                        
+                    &lt;element name="cabin" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="arrivingDate" nillable="true" type="dateTime"/&gt;
+                                        
+                    &lt;element name="price" nillable="true" type="double"/&gt;
+                                        
+                    &lt;element name="arrivingCity" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="meals" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="departinDate" nillable="true" type="dateTime"/&gt;
+                                        
+                    &lt;element name="departinCity" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="number" type="int"/&gt;
+                                    
+                &lt;/sequence&gt;
+                            
+            &lt;/complexType&gt;
+                        
+            &lt;complexType name="AAException"&gt;
+                                
+                &lt;sequence&gt;
+                                        
+                    &lt;element name="error" nillable="true" type="string"/&gt;
+                                    
+                &lt;/sequence&gt;
+                            
+            &lt;/complexType&gt;
+                        
+            &lt;element name="bookFligthElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="f" nillable="true" type="tns:Flight"/&gt;
+                                                
+                        &lt;element name="passengerName" nillable="true" type="string"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="bookFligthResponseElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="result" type="boolean"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="AAExceptionElement" type="tns:AAException"/&gt;
+                        
+            &lt;element name="searchFlightElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="departinCity" nillable="true" type="string"/&gt;
+                                                
+                        &lt;element name="arrivingCity" nillable="true" type="string"/&gt;
+                                                
+                        &lt;element name="departinDate" nillable="true" type="dateTime"/&gt;
+                                                
+                        &lt;element name="cabin" nillable="true" type="string"/&gt;
+                                                
+                        &lt;element name="PromotionCode" nillable="true" type="string"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="searchFlightResponseElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element maxOccurs="unbounded" minOccurs="0" name="result" nillable="true" type="tns:Trip"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;complexType name="Trip"&gt;
+                                
+                &lt;sequence&gt;
+                                        
+                    &lt;element maxOccurs="unbounded" minOccurs="0" name="flights" nillable="true" type="tns:Flight"/&gt;
+                                    
+                &lt;/sequence&gt;
+                            
+            &lt;/complexType&gt;
+                    
+        &lt;/schema&gt;
+            
+    &lt;/types&gt;
+        
+    &lt;message name="AAFlightsService_bookFligth"&gt;
+                
+        &lt;part element="tns0:bookFligthElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="AAFlightsService_bookFligthResponse"&gt;
+                
+        &lt;part element="tns0:bookFligthResponseElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="AAException"&gt;
+                
+        &lt;part element="tns0:AAExceptionElement" name="AAExceptionElement"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="AAFlightsService_searchFlight"&gt;
+                
+        &lt;part element="tns0:searchFlightElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="AAFlightsService_searchFlightResponse"&gt;
+                
+        &lt;part element="tns0:searchFlightResponseElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;portType name="AAFlightsService"&gt;
+                
+        &lt;operation name="bookFligth"&gt;
+                        
+            &lt;input message="tns:AAFlightsService_bookFligth"/&gt;
+                        
+            &lt;output message="tns:AAFlightsService_bookFligthResponse"/&gt;
+                        
+            &lt;fault message="tns:AAException" name="AAException"/&gt;
+                    
+        &lt;/operation&gt;
+                
+        &lt;operation name="searchFlight"&gt;
+                        
+            &lt;input message="tns:AAFlightsService_searchFlight"/&gt;
+                        
+            &lt;output message="tns:AAFlightsService_searchFlightResponse"/&gt;
+                    
+        &lt;/operation&gt;
+            
+    &lt;/portType&gt;
+        
+    &lt;binding name="AAFlightsServiceSoapHttp" type="tns:AAFlightsService"&gt;
+                
+        &lt;soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+                
+        &lt;operation name="bookFligth"&gt;
+                        
+            &lt;soap:operation soapAction="http://services.aa.com//bookFligth"/&gt;
+                        
+            &lt;input&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/input&gt;
+                        
+            &lt;output&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/output&gt;
+                        
+            &lt;fault name="AAException"&gt;
+                                
+                &lt;soap:fault encodingStyle="" name="AAException" use="literal"/&gt;
+                            
+            &lt;/fault&gt;
+                    
+        &lt;/operation&gt;
+                
+        &lt;operation name="searchFlight"&gt;
+                        
+            &lt;soap:operation soapAction="http://services.aa.com//searchFlight"/&gt;
+                        
+            &lt;input&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/input&gt;
+                        
+            &lt;output&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/output&gt;
+                    
+        &lt;/operation&gt;
+            
+    &lt;/binding&gt;
+        
+    &lt;service name="AAFlightsService"&gt;
+                
+        &lt;port binding="tns:AAFlightsServiceSoapHttp" name="AAFlightsServiceSoapHttpPort"&gt;
+                        
+            &lt;soap:address location="http://192.168.1.100:8888/TuresBalonProviders-AA-context-root/AAFlightsServiceSoapHttpPort"/&gt;
+                    
+        &lt;/port&gt;
+            
+    &lt;/service&gt;
+    
+&lt;/definitions&gt;
+</content>
+            <id>1eb2DY</id>
+            <name>Upload-2019-02-21-07-04-45.126</name>
+            <projectId>zdWrWV</projectId>
+            <type>WSDL</type>
+        </resource>
+    </resources>
+</soapExportContainer>

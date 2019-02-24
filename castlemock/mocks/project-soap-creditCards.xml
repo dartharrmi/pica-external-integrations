@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<soapExportContainer>
+    <mockResponses>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:chargeCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&#13;
+		&lt;/web:&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>vtRETj</id>
+            <name>Mock4_Charge - Malformed</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>fWtLIF</id>
+            <name>Mock5_Charge</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>fIpsQ9</id>
+            <name>Mock6_Charge</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>500</httpStatusCode>
+            <id>of6YV8</id>
+            <name>Mock8_Charge</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:chargeCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&lt;/web:result&gt;&#13;
+		&lt;/web:chargeCreditCardResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>woEcJw</id>
+            <name>Mock1_Charge- True</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:chargeCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&lt;/web:result&gt;&#13;
+		&lt;/web:chargeCreditCardResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>nVRy3Z</id>
+            <name>Mock2_Charge - True</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:chargeCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&#13;
+		&lt;/web:&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>8956zm</id>
+            <name>Mock3_Charge - Malformed</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>500</httpStatusCode>
+            <id>USvrpD</id>
+            <name>Mock7_Charge</name>
+            <operationId>zVjwPR</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:verifyCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&lt;/web:result&gt;&#13;
+		&lt;/web:verifyCreditCardResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>FyfzLP</id>
+            <name>Mock1_Verified - True</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:verifyCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&#13;
+		&lt;/web:&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>DgdnTl</id>
+            <name>Mock4_Verified - Malformed</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>dONvUs</id>
+            <name>Mock6_Verified</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>500</httpStatusCode>
+            <id>AZGzjU</id>
+            <name>Mock7_Verified</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>500</httpStatusCode>
+            <id>55xMiC</id>
+            <name>Mock8_Verified</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:verifyCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&lt;/web:result&gt;&#13;
+		&lt;/web:verifyCreditCardResponseElement&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>MbhYJV</id>
+            <name>Mock2_Verified - True</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;&#13;
+	&lt;soapenv:Header/&gt;&#13;
+	&lt;soapenv:Body&gt;&#13;
+		&lt;web:verifyCreditCardResponseElement&gt;&#13;
+			&lt;web:result&gt;true&#13;
+		&lt;/web:&gt;&#13;
+	&lt;/soapenv:Body&gt;&#13;
+&lt;/soapenv:Envelope&gt;</body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>200</httpStatusCode>
+            <id>rSn6lJ</id>
+            <name>Mock3_Verified - Malformed</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+        <mockResponse>
+            <body></body>
+            <contentEncodings/>
+            <httpHeaders/>
+            <httpStatusCode>400</httpStatusCode>
+            <id>iJfG0P</id>
+            <name>Mock5_Verified</name>
+            <operationId>skyllS</operationId>
+            <status>ENABLED</status>
+            <usingExpressions>false</usingExpressions>
+            <xpathExpressions/>
+        </mockResponse>
+    </mockResponses>
+    <operations>
+        <operation>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultBody>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:chargeCreditCardResponseElement&gt;?&lt;/web:chargeCreditCardResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</defaultBody>
+            <forwardedEndpoint>http://192.168.1.100:8888/TuresBalonProviders-CreditVerifier-context-root/CreditCardServiceSoapHttpPort</forwardedEndpoint>
+            <httpMethod>POST</httpMethod>
+            <id>zVjwPR</id>
+            <identifyStrategy>ELEMENT_NAMESPACE</identifyStrategy>
+            <mockOnFailure>false</mockOnFailure>
+            <mockResponses/>
+            <name>chargeCreditCard</name>
+            <networkDelay>0</networkDelay>
+            <operationIdentifier>
+                <name>chargeCreditCardElement</name>
+                <namespace>http://services.creditverifier.com/</namespace>
+            </operationIdentifier>
+            <originalEndpoint>http://192.168.1.100:8888/TuresBalonProviders-CreditVerifier-context-root/CreditCardServiceSoapHttpPort</originalEndpoint>
+            <portId>48SzPQ</portId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <soapVersion>SOAP11</soapVersion>
+            <status>MOCKED</status>
+        </operation>
+        <operation>
+            <currentResponseSequenceIndex>0</currentResponseSequenceIndex>
+            <defaultBody>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://services.creditverifier.com/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:verifyCreditCardResponseElement&gt;?&lt;/web:verifyCreditCardResponseElement&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</defaultBody>
+            <forwardedEndpoint>http://192.168.1.100:8888/TuresBalonProviders-CreditVerifier-context-root/CreditCardServiceSoapHttpPort</forwardedEndpoint>
+            <httpMethod>POST</httpMethod>
+            <id>skyllS</id>
+            <identifyStrategy>ELEMENT_NAMESPACE</identifyStrategy>
+            <mockOnFailure>false</mockOnFailure>
+            <mockResponses/>
+            <name>verifyCreditCard</name>
+            <networkDelay>0</networkDelay>
+            <operationIdentifier>
+                <name>verifyCreditCardElement</name>
+                <namespace>http://services.creditverifier.com/</namespace>
+            </operationIdentifier>
+            <originalEndpoint>http://192.168.1.100:8888/TuresBalonProviders-CreditVerifier-context-root/CreditCardServiceSoapHttpPort</originalEndpoint>
+            <portId>48SzPQ</portId>
+            <responseStrategy>RANDOM</responseStrategy>
+            <simulateNetworkDelay>false</simulateNetworkDelay>
+            <soapVersion>SOAP11</soapVersion>
+            <status>MOCKED</status>
+        </operation>
+    </operations>
+    <ports>
+        <port>
+            <id>48SzPQ</id>
+            <name>CreditCardServiceSoapHttpPort</name>
+            <operations/>
+            <projectId>Evlc8R</projectId>
+            <uri>CreditCardServiceSoapHttpPort</uri>
+        </port>
+    </ports>
+    <project>
+        <created>2019-02-21T16:40:13.814Z</created>
+        <description></description>
+        <id>Evlc8R</id>
+        <name>AES_PICA_Mock_CreditCards</name>
+        <updated>2019-02-21T16:40:13.814Z</updated>
+        <ports/>
+        <resources/>
+    </project>
+    <resources>
+        <resource>
+            <content>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://services.creditverifier.com/" xmlns:tns0="http://services.creditverifier.com/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CreditCardService" targetNamespace="http://services.creditverifier.com/"&gt;
+        
+    &lt;types&gt;
+                
+        &lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://services.creditverifier.com/types/" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://services.creditverifier.com/"&gt;
+                        
+            &lt;import namespace="http://services.creditverifier.com/types/"/&gt;
+                        
+            &lt;complexType name="CreditCardValidationFaultMessage"&gt;
+                                
+                &lt;sequence&gt;
+                                        
+                    &lt;element name="error" nillable="true" type="string"/&gt;
+                                    
+                &lt;/sequence&gt;
+                            
+            &lt;/complexType&gt;
+                        
+            &lt;element name="chargeCreditCardElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="cc" nillable="true" type="ns1:CreditCard"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="chargeCreditCardResponseElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="result" type="boolean"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="CreditCardValidationFaultMessageElement" type="tns:CreditCardValidationFaultMessage"/&gt;
+                        
+            &lt;element name="verifyCreditCardElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="cc" nillable="true" type="ns1:CreditCard"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                        
+            &lt;element name="verifyCreditCardResponseElement"&gt;
+                                
+                &lt;complexType&gt;
+                                        
+                    &lt;sequence&gt;
+                                                
+                        &lt;element name="result" type="boolean"/&gt;
+                                            
+                    &lt;/sequence&gt;
+                                    
+                &lt;/complexType&gt;
+                            
+            &lt;/element&gt;
+                    
+        &lt;/schema&gt;
+                
+        &lt;schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://services.creditverifier.com/types/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified" targetNamespace="http://services.creditverifier.com/types/"&gt;
+                        
+            &lt;import namespace="http://services.creditverifier.com/"/&gt;
+                        
+            &lt;complexType name="CreditCard"&gt;
+                                
+                &lt;sequence&gt;
+                                        
+                    &lt;element name="type" nillable="true" type="string"/&gt;
+                                        
+                    &lt;element name="mount" nillable="true" type="double"/&gt;
+                                        
+                    &lt;element name="number" nillable="true" type="string"/&gt;
+                                    
+                &lt;/sequence&gt;
+                            
+            &lt;/complexType&gt;
+                    
+        &lt;/schema&gt;
+            
+    &lt;/types&gt;
+        
+    &lt;message name="CreditCardService_chargeCreditCard"&gt;
+                
+        &lt;part element="tns:chargeCreditCardElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="CreditCardService_chargeCreditCardResponse"&gt;
+                
+        &lt;part element="tns:chargeCreditCardResponseElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="CreditCardValidationFaultMessage"&gt;
+                
+        &lt;part element="tns:CreditCardValidationFaultMessageElement" name="CreditCardValidationFaultMessageElement"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="CreditCardService_verifyCreditCard"&gt;
+                
+        &lt;part element="tns:verifyCreditCardElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;message name="CreditCardService_verifyCreditCardResponse"&gt;
+                
+        &lt;part element="tns:verifyCreditCardResponseElement" name="parameters"/&gt;
+            
+    &lt;/message&gt;
+        
+    &lt;portType name="CreditCardService"&gt;
+                
+        &lt;operation name="chargeCreditCard"&gt;
+                        
+            &lt;input message="tns:CreditCardService_chargeCreditCard"/&gt;
+                        
+            &lt;output message="tns:CreditCardService_chargeCreditCardResponse"/&gt;
+                        
+            &lt;fault message="tns:CreditCardValidationFaultMessage" name="CreditCardValidationFaultMessage"/&gt;
+                    
+        &lt;/operation&gt;
+                
+        &lt;operation name="verifyCreditCard"&gt;
+                        
+            &lt;input message="tns:CreditCardService_verifyCreditCard"/&gt;
+                        
+            &lt;output message="tns:CreditCardService_verifyCreditCardResponse"/&gt;
+                    
+        &lt;/operation&gt;
+            
+    &lt;/portType&gt;
+        
+    &lt;binding name="CreditCardServiceSoapHttp" type="tns:CreditCardService"&gt;
+                
+        &lt;soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+                
+        &lt;operation name="chargeCreditCard"&gt;
+                        
+            &lt;soap:operation soapAction="http://services.creditverifier.com//chargeCreditCard"/&gt;
+                        
+            &lt;input&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/input&gt;
+                        
+            &lt;output&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/output&gt;
+                        
+            &lt;fault name="CreditCardValidationFaultMessage"&gt;
+                                
+                &lt;soap:fault encodingStyle="" name="CreditCardValidationFaultMessage" use="literal"/&gt;
+                            
+            &lt;/fault&gt;
+                    
+        &lt;/operation&gt;
+                
+        &lt;operation name="verifyCreditCard"&gt;
+                        
+            &lt;soap:operation soapAction="http://services.creditverifier.com//verifyCreditCard"/&gt;
+                        
+            &lt;input&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/input&gt;
+                        
+            &lt;output&gt;
+                                
+                &lt;soap:body use="literal"/&gt;
+                            
+            &lt;/output&gt;
+                    
+        &lt;/operation&gt;
+            
+    &lt;/binding&gt;
+        
+    &lt;service name="CreditCardService"&gt;
+                
+        &lt;port binding="tns:CreditCardServiceSoapHttp" name="CreditCardServiceSoapHttpPort"&gt;
+                        
+            &lt;soap:address location="http://192.168.1.100:8888/TuresBalonProviders-CreditVerifier-context-root/CreditCardServiceSoapHttpPort"/&gt;
+                    
+        &lt;/port&gt;
+            
+    &lt;/service&gt;
+    
+&lt;/definitions&gt;
+</content>
+            <id>7r054l</id>
+            <name>Upload-2019-02-21-04-40-33.737</name>
+            <projectId>Evlc8R</projectId>
+            <type>WSDL</type>
+        </resource>
+    </resources>
+</soapExportContainer>
