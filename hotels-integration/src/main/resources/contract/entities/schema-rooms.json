@@ -1,0 +1,78 @@
+ 1 {
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "object",
+ 6   "title": "The Root Schema",
+ 7   "required": [
+ 8     "rooms"
+ 9   ],
+10   "properties": {
+11     "rooms": {
+12       "$id": "#/properties/rooms",
+13       "type": "array",
+14       "title": "The Rooms Schema",
+15       "items": {
+16         "$id": "#/properties/rooms/items",
+17         "type": "object",
+18         "title": "The Items Schema",
+19         "required": [
+20           "roomNumber",
+21           "hotelId",
+22           "roomType",
+23           "roomPrice",
+24           "isReserved"
+25         ],
+26         "properties": {
+27           "roomNumber": {
+28             "$id": "#/properties/rooms/items/properties/roomNumber",
+29             "type": "integer",
+30             "title": "The Roomnumber Schema",
+31             "default": 0,
+32             "examples": [
+33               123
+34             ]
+35           },
+36           "hotelId": {
+37             "$id": "#/properties/rooms/items/properties/hotelId",
+38             "type": "integer",
+39             "title": "The Hotelid Schema",
+40             "default": 0,
+41             "examples": [
+42               123456
+43             ]
+44           },
+45           "roomType": {
+46             "$id": "#/properties/rooms/items/properties/roomType",
+47             "type": "string",
+48             "title": "The Roomtype Schema",
+49             "default": "",
+50             "examples": [
+51               "PRESIDENTIAL_SUITE"
+52             ],
+53             "pattern": "^(.*)$"
+54           },
+55           "roomPrice": {
+56             "$id": "#/properties/rooms/items/properties/roomPrice",
+57             "type": "string",
+58             "title": "The Roomprice Schema",
+59             "default": "",
+60             "examples": [
+61               "789000"
+62             ],
+63             "pattern": "^(.*)$"
+64           },
+65           "isReserved": {
+66             "$id": "#/properties/rooms/items/properties/isReserved",
+67             "type": "boolean",
+68             "title": "The Isreserved Schema",
+69             "default": false,
+70             "examples": [
+71               true
+72             ]
+73           }
+74         }
+75       }
+76     }
+77   }
+78 }

@@ -1,0 +1,74 @@
+ 1 {
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "object",
+ 6   "title": "The Root Schema",
+ 7   "required": [
+ 8     "reservation"
+ 9   ],
+10   "properties": {
+11     "reservation": {
+12       "$id": "#/properties/reservation",
+13       "type": "object",
+14       "title": "The Reservation Schema",
+15       "required": [
+16         "hotelId",
+17         "roomNumber",
+18         "checkIn",
+19         "checkOut",
+20         "guestName"
+21       ],
+22       "properties": {
+23         "hotelId": {
+24           "$id": "#/properties/reservation/properties/hotelId",
+25           "type": "integer",
+26           "title": "The Hotelid Schema",
+27           "default": 0,
+28           "examples": [
+29             123456
+30           ]
+31         },
+32         "roomNumber": {
+33           "$id": "#/properties/reservation/properties/roomNumber",
+34           "type": "integer",
+35           "title": "The Roomnumber Schema",
+36           "default": 0,
+37           "examples": [
+38             123
+39           ]
+40         },
+41         "checkIn": {
+42           "$id": "#/properties/reservation/properties/checkIn",
+43           "type": "string",
+44           "title": "The Checkin Schema",
+45           "default": "",
+46           "examples": [
+47             "2019-02-10T14:00:00"
+48           ],
+49           "pattern": "^(.*)$"
+50         },
+51         "checkOut": {
+52           "$id": "#/properties/reservation/properties/checkOut",
+53           "type": "string",
+54           "title": "The Checkout Schema",
+55           "default": "",
+56           "examples": [
+57             "2019-02-15T12:00:00"
+58           ],
+59           "pattern": "^(.*)$"
+60         },
+61         "guestName": {
+62           "$id": "#/properties/reservation/properties/guestName",
+63           "type": "string",
+64           "title": "The Guestname Schema",
+65           "default": "",
+66           "examples": [
+67             "Miguel Arroyo"
+68           ],
+69           "pattern": "^(.*)$"
+70         }
+71       }
+72     }
+73   }
+74 }

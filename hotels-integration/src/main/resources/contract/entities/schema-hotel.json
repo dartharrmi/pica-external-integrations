@@ -1,0 +1,70 @@
+1 {
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "array",
+ 6   "title": "The Root Schema",
+ 7   "items": {
+  8     "$id": "#/items",
+  9     "type": "object",
+  10     "title": "The Items Schema",
+  11     "required": [
+   12       "id",
+   13       "name",
+   14       "address",
+   15       "city",
+   16       "country"
+   17     ],
+  18     "properties": {
+   19       "id": {
+    20         "$id": "#/items/properties/id",
+    21         "type": "integer",
+    22         "title": "The Id Schema",
+    23         "default": 0,
+    24         "examples": [
+     25           1
+     26         ]
+    27       },
+   28       "name": {
+    29         "$id": "#/items/properties/name",
+    30         "type": "string",
+    31         "title": "The Name Schema",
+    32         "default": "",
+    33         "examples": [
+     34           "Mraz LLC"
+     35         ],
+    36         "pattern": "^(.*)$"
+    37       },
+   38       "address": {
+    39         "$id": "#/items/properties/address",
+    40         "type": "string",
+    41         "title": "The Address Schema",
+    42         "default": "",
+    43         "examples": [
+     44           "06212 Lucie Knoll\nSouth Taylor, SC 94418-8824"
+     45         ],
+    46         "pattern": "^(.*)$"
+    47       },
+   48       "city": {
+    49         "$id": "#/items/properties/city",
+    50         "type": "string",
+    51         "title": "The City Schema",
+    52         "default": "",
+    53         "examples": [
+     54           "North Sunnyberg"
+     55         ],
+    56         "pattern": "^(.*)$"
+    57       },
+   58       "country": {
+    59         "$id": "#/items/properties/country",
+    60         "type": "string",
+    61         "title": "The Country Schema",
+    62         "default": "",
+    63         "examples": [
+     64           "PT"
+     65         ],
+    66         "pattern": "^(.*)$"
+    67       }
+   68     }
+  69   }
+ 70 }

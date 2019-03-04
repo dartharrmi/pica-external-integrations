@@ -1,0 +1,74 @@
+swagger: '2.0'
+info:
+  version: 1.0.1
+  title: 'Hotel integration service'
+
+schemes:
+- http
+- https
+
+basePath: /hotels
+
+paths:
+  /all:
+    get:
+      tags:
+      - Gets the list of hotels
+      operationId: getListOfHotels
+      responses:
+        200:
+          description: 'Hotels retrieved successfully'
+          schema:
+            $ref: './entities/schema-hotel.json'
+        400:
+          description: 'Error retrieving the hotels'
+  /{hotelId}:
+    get:
+      tags:
+      - Gets the details from a specific hotel
+      operationId: getHotelDetails
+      parameters:
+      - name: hotelId
+        in: path
+        type: number
+        required: true
+      responses:
+        200:
+          description: 'Details successfully retrieved'
+          schema:
+            $ref: './entities/schema-hotel.json'
+        400:
+          description: 'Error retrieving the details for the hotel'
+  /{hotelId}/rooms:
+    get:
+      tags:
+      - Gets the list of rooms associated to the hotel
+      operationId: getListOfRooms
+      parameters:
+      - name: hotelId
+        in: path
+        type: number
+        required: true
+        description: "Id of the hotel"
+      responses:
+        200:
+          description: 'Rooms retrieved successfully'
+          schema:
+            $ref: './entities/schema-rooms.json'
+        400:
+          description: 'Error retrieving the rooms'
+  /hotel/reservation/create/:
+    post:
+      tags:
+      - Create reservation
+      operationId: createReservation
+      parameters:
+      - name: reservation
+        in: body
+        type: object
+        required: true
+        schema:
+          $ref: './entities/schema-new-reservation.json'
+      responses:
+        200:
+          description: 'Get information of invoice'
