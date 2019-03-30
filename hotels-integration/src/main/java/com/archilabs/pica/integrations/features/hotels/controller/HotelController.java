@@ -57,7 +57,7 @@ public class HotelController {
 
         try {
             TouresBalonReservation r = hotelService.createReservation(touresBalonReservation);
-            response = new ResponseEntity<>(r, HttpStatus.OK);
+            response = new ResponseEntity<>(r, HttpStatus.CREATED);
         } catch (Exception e) {
             response = new ResponseEntity("Please verify that the hotel and room exists", HttpStatus.BAD_REQUEST);
         }
