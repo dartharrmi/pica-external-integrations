@@ -1,0 +1,131 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Hotels API"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "basePath": "/pica/integrations/hotels",
+  "paths": {
+    "/all": {
+      "get": {
+        "tags": [
+          "Gets all the hotels"
+        ],
+        "operationId": "all",
+        "responses": {
+          "200": {
+            "description": "Hotels retrieved successfully",
+            "schema": {
+              "$ref": "./entities/schema-response-hotels-all.json"
+            }
+          },
+          "400": {
+            "description": "Error retrieving the hotels"
+          },
+          "500": {
+            "description": "Error retrieving the hotels"
+          }
+        }
+      }
+    },
+    "/{hotelId}": {
+      "get": {
+        "tags": [
+          "Gets a single hotel"
+        ],
+        "operationId": "getHotel",
+        "parameters": [
+          {
+            "name": "hotelId",
+            "in": "path",
+            "type": "number",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Hotel retrieved successfully",
+            "schema": {
+              "$ref": "./entities/schema-response-hotels-single.json"
+            }
+          },
+          "400": {
+            "description": "Error retrieving the hotels"
+          },
+          "500": {
+            "description": "Error retrieving the hotels"
+          }
+        }
+      }
+    },
+    "/{hotelId}/rooms": {
+      "get": {
+        "tags": [
+          "Gets the rooms associated to a hotel"
+        ],
+        "operationId": "getHotelRooms",
+        "parameters": [
+          {
+            "name": "hotelId",
+            "in": "path",
+            "type": "number",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Hotel retrieved successfully",
+            "schema": {
+              "$ref": "./entities/schema-response-hotel-rooms.json"
+            }
+          },
+          "400": {
+            "description": "Error retrieving the hotels"
+          },
+          "500": {
+            "description": "Error retrieving the hotels"
+          }
+        }
+      }
+    },
+    "/reservations/create": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "Create reservation"
+        ],
+        "operationId": "createReservation",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "reservation",
+            "required": true,
+            "schema": {
+              "$ref": "./entities/schema-request-hotel-rooms.json"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Reservation created",
+            "schema": {
+              "$ref": "./entities/schema-response-hotel-rooms.json"
+            }
+          },
+          "400": {
+            "description": "Error creating the reservation"
+          },
+          "500": {
+            "description": "Error creating the reservation"
+          }
+        }
+      }
+    }
+  }
+}

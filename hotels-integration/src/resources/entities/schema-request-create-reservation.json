@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "hotelId": {
+      "type": "integer"
+    },
+    "roomNumber": {
+      "type": "integer"
+    },
+    "checkInDate": {
+      "type": "string"
+    },
+    "checkOutDate": {
+      "type": "string"
+    },
+    "guestName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "hotelId",
+    "roomNumber",
+    "checkInDate",
+    "checkOutDate",
+    "guestName"
+  ]
+}

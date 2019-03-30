@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "roomNumber": {
+          "type": "integer"
+        },
+        "hotelId": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        },
+        "price": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "roomNumber",
+        "hotelId",
+        "type",
+        "price"
+      ]
+    }
+  ]
+}
