@@ -1,0 +1,89 @@
+configurations {
+    jaxb
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.springframework.boot'// version '2.1.3.RELEASE'
+
+repositories {
+    mavenCentral()
+}
+
+// tag::wsdl[]
+task genJaxb {
+    ext.sourcesDir = "${buildDir}/generated-sources/jaxb"
+    ext.classesDir = "${buildDir}/classes/jaxb"
+    ext.schema = "./src/main/resources/wsdl/AAFlightsService.wsdl"
+
+    outputs.dir classesDir
+
+    doLast() {
+        project.ant {
+            taskdef name: "xjc", classname: "com.sun.tools.xjc.XJCTask",
+                    classpath: configurations.jaxb.asPath
+            mkdir(dir: sourcesDir)
+            mkdir(dir: classesDir)
+
+            xjc(destdir: sourcesDir, schema: schema, package: "models.wsdl") {
+                arg(value: "-wsdl")
+                produces(dir: sourcesDir, includes: "**/*.java")
+            }
+
+            javac(destdir: classesDir, source: 1.8, target: 1.8, debug: true,
+                    debugLevel: "lines,vars,source",
+                    classpath: configurations.jaxb.asPath) {
+                src(path: sourcesDir)
+                include(name: "**/*.java")
+                include(name: "*.java")
+            }
+
+            copy(todir: classesDir) {
+                fileset(dir: sourcesDir, erroronmissingdir: false) {
+                    exclude(name: "**/*.java")
+                }
+            }
+        }
+    }
+}
+// end::wsdl[]
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group = 'com.archilabs.pica'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.ws:spring-ws-core'
+    runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+    compile(files(genJaxb.classesDir).builtBy(genJaxb))
+
+    jaxb "com.sun.xml.bind:jaxb-xjc:2.1.7"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootJar {
+    baseName = 'gs-consuming-web-soap'
+    version = '0.1.0'
+
+    from genJaxb.classesDir
+}
+
+task afterEclipseImport {
+    dependsOn genJaxb
+}
