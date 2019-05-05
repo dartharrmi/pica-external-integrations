@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "ffd13519-2349-4e7e-8e3e-ef387871344f",
+		"name": "Pica_External_Integrarion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "Get all hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8086/pica/integrations/hotels/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"pica",
+								"integrations",
+								"hotels",
+								"all"
+							]
+						},
+						"description": "Gets all the hotels stored"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rooms by hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8086/pica/integrations/hotels/31/rooms",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"pica",
+								"integrations",
+								"hotels",
+								"31",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Reservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": \"qwertyu\",\n    \"hotelId\": 98,\n    \"roomNumber\": 248,\n    \"checkInDate\": \"2019-03-04\",\n    \"checkOutDate\": \"2019-03-05\",\n    \"guestName\": \"Miguel Arroyo\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8086/pica/integrations/hotels/reservations/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"pica",
+								"integrations",
+								"hotels",
+								"reservations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8086/pica/integrations/rooms",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"pica",
+								"integrations",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rooms",
+			"item": []
+		}
+	]
+}
