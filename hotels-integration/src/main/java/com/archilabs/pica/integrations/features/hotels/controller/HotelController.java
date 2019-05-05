@@ -1,7 +1,7 @@
 package com.archilabs.pica.integrations.features.hotels.controller;
 
-import com.archilabs.pica.integrations.model.Hotel;
 import com.archilabs.pica.integrations.features.hotels.service.IHotelService;
+import com.archilabs.pica.integrations.model.Hotel;
 import com.archilabs.pica.integrations.model.Room;
 import com.archilabs.pica.integrations.model.TouresBalonReservation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +60,20 @@ public class HotelController {
             response = new ResponseEntity<>(r, HttpStatus.CREATED);
         } catch (Exception e) {
             response = new ResponseEntity("Please verify that the hotel and room exists", HttpStatus.BAD_REQUEST);
+        }
+
+        return response;
+    }
+
+    @GetMapping("/{hotelId}/reservations")
+    public ResponseEntity<List<TouresBalonReservation>> getReservations(@PathVariable Integer hotelId) {
+        ResponseEntity<List<TouresBalonReservation>> response;
+
+        try {
+            List<TouresBalonReservation> r = hotelService.getAllReservations(hotelId);
+            response = new ResponseEntity<>(r, HttpStatus.CREATED);
+        } catch (Exception e) {
+            response = new ResponseEntity("Hotel doesn't have reservations", HttpStatus.BAD_REQUEST);
         }
 
         return response;

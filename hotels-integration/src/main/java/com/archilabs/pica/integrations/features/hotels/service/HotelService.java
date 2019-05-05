@@ -1,10 +1,10 @@
 package com.archilabs.pica.integrations.features.hotels.service;
 
+import com.archilabs.pica.integrations.features.hotels.repository.HotelRepository;
 import com.archilabs.pica.integrations.features.reservations.touresbalon.repository.TouresBalonReservationRepository;
+import com.archilabs.pica.integrations.features.rooms.repository.RoomRepository;
 import com.archilabs.pica.integrations.model.Hotel;
 import com.archilabs.pica.integrations.model.Room;
-import com.archilabs.pica.integrations.features.hotels.repository.HotelRepository;
-import com.archilabs.pica.integrations.features.rooms.repository.RoomRepository;
 import com.archilabs.pica.integrations.model.TouresBalonReservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,5 +44,10 @@ public class HotelService implements IHotelService {
     @Override
     public TouresBalonReservation createReservation(TouresBalonReservation newReservation) {
         return reservationRepository.save(newReservation);
+    }
+
+    @Override
+    public List<TouresBalonReservation> getAllReservations(Integer hotelId) {
+        return reservationRepository.findAllByHotelId(hotelId);
     }
 }

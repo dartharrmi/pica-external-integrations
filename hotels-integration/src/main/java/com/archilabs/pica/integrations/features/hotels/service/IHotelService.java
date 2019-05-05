@@ -16,4 +16,6 @@ public interface IHotelService {
     List<Room> findRoomsByHotelId(Integer hotelId);
 
     TouresBalonReservation createReservation(TouresBalonReservation newReservation);
+
+    List<TouresBalonReservation> getAllReservations(Integer hotelId);
 }
