@@ -15,7 +15,7 @@ public class TouresBalonReservation implements Serializable {
 
     @Id
     @Column(name = "ORDER_ID")
-    private String orderId;
+    private Integer orderId;
 
     @Id
     @Column(name = "HOTEL_ID")
@@ -42,7 +42,7 @@ public class TouresBalonReservation implements Serializable {
     public TouresBalonReservation() {
     }
 
-    public TouresBalonReservation(String orderId, Integer hotelId, Integer roomNumber, Date checkInDate, Date checkOutDate, Integer state, String guestName) {
+    public TouresBalonReservation(Integer orderId, Integer hotelId, Integer roomNumber, Date checkInDate, Date checkOutDate, Integer state, String guestName) {
         this.orderId = orderId;
         this.hotelId = hotelId;
         this.roomNumber = roomNumber;
@@ -52,11 +52,11 @@ public class TouresBalonReservation implements Serializable {
         this.guestName = guestName;
     }
 
-    public String getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
@@ -142,7 +142,7 @@ public class TouresBalonReservation implements Serializable {
 
     public static class TouresBalonReservationPK implements Serializable {
 
-        private String orderId;
+        private Integer orderId;
         private Integer hotelId;
         private Integer roomNumber;
         private Date checkInDate;
@@ -151,7 +151,7 @@ public class TouresBalonReservation implements Serializable {
         public TouresBalonReservationPK() {
         }
 
-        public TouresBalonReservationPK(String orderId, Integer hotelId, Integer roomNumber, Date checkInDate, Date checkOutDate) {
+        public TouresBalonReservationPK(Integer orderId, Integer hotelId, Integer roomNumber, Date checkInDate, Date checkOutDate) {
             this.orderId = orderId;
             this.hotelId = hotelId;
             this.roomNumber = roomNumber;
@@ -159,11 +159,11 @@ public class TouresBalonReservation implements Serializable {
             this.checkOutDate = checkOutDate;
         }
 
-        public String getOrderId() {
+        public Integer getOrderId() {
             return orderId;
         }
 
-        public void setOrderId(String orderId) {
+        public void setOrderId(Integer orderId) {
             this.orderId = orderId;
         }
 
