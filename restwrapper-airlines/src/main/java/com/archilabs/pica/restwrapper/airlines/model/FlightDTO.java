@@ -1,6 +1,7 @@
 package com.archilabs.pica.restwrapper.airlines.model;
 
 import com.aa.services.types.Flight;
+import com.avianca.servicios.types.Vuelo;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -12,9 +13,9 @@ public class FlightDTO {
     private Double price;
     private String arrivingCity;
     private String meals;
-    private LocalDate departinDate;
-    private String departinCity;
-    private int number;
+    private LocalDate departingDate;
+    private String departingCity;
+    private String number;
 
     public static FlightDTO fromFlight(Flight flight) {
         FlightDTO flightDTO = new FlightDTO();
@@ -24,9 +25,23 @@ public class FlightDTO {
         flightDTO.price = flight.getPrice();
         flightDTO.arrivingCity = flight.getArrivingCity();
         flightDTO.meals = flight.getMeals();
-        flightDTO.departinDate = flight.getDepartinDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
-        flightDTO.departinCity = flight.getDepartinCity();
-        flightDTO.number = flight.getNumber();
+        flightDTO.departingDate = flight.getDepartinDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
+        flightDTO.departingCity = flight.getDepartinCity();
+        flightDTO.number = String.valueOf(flight.getNumber());
+
+        return flightDTO;
+    }
+
+    public static FlightDTO fromVuelo(Vuelo vuelo) {
+        FlightDTO flightDTO = new FlightDTO();
+
+        flightDTO.cabin = vuelo.getClase();
+        flightDTO.arrivingDate = vuelo.getFechaLlegada().toGregorianCalendar().toZonedDateTime().toLocalDate();
+        flightDTO.price = vuelo.getPrecio().doubleValue();
+        flightDTO.arrivingCity = vuelo.getCiudadDestino();
+        flightDTO.departingDate = vuelo.getFechaSalida().toGregorianCalendar().toZonedDateTime().toLocalDate();
+        flightDTO.departingCity = vuelo.getCiudadOrigen();
+        flightDTO.number = vuelo.getVuelo();
 
         return flightDTO;
     }
@@ -71,27 +86,27 @@ public class FlightDTO {
         this.meals = meals;
     }
 
-    public LocalDate getDepartinDate() {
-        return departinDate;
+    public LocalDate getDepartingDate() {
+        return departingDate;
     }
 
-    public void setDepartinDate(LocalDate departinDate) {
-        this.departinDate = departinDate;
+    public void setDepartingDate(LocalDate departingDate) {
+        this.departingDate = departingDate;
     }
 
-    public String getDepartinCity() {
-        return departinCity;
+    public String getDepartingCity() {
+        return departingCity;
     }
 
-    public void setDepartinCity(String departinCity) {
-        this.departinCity = departinCity;
+    public void setDepartingCity(String departingCity) {
+        this.departingCity = departingCity;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -106,13 +121,13 @@ public class FlightDTO {
                 Objects.equals(price, tripDTO.price) &&
                 Objects.equals(arrivingCity, tripDTO.arrivingCity) &&
                 Objects.equals(meals, tripDTO.meals) &&
-                Objects.equals(departinDate, tripDTO.departinDate) &&
-                Objects.equals(departinCity, tripDTO.departinCity);
+                Objects.equals(departingDate, tripDTO.departingDate) &&
+                Objects.equals(departingCity, tripDTO.departingCity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cabin, arrivingDate, price, arrivingCity, meals, departinDate, departinCity, number);
+        return Objects.hash(cabin, arrivingDate, price, arrivingCity, meals, departingDate, departingCity, number);
     }
 
     @Override
@@ -123,8 +138,8 @@ public class FlightDTO {
                 ", price=" + price +
                 ", arrivingCity='" + arrivingCity + '\'' +
                 ", meals='" + meals + '\'' +
-                ", departinDate=" + departinDate +
-                ", departinCity='" + departinCity + '\'' +
+                ", departingDate=" + departingDate +
+                ", departingCity='" + departingCity + '\'' +
                 ", number=" + number +
                 '}';
     }

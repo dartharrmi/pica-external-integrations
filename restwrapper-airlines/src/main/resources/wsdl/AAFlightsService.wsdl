@@ -20,8 +20,8 @@
                     <element name="price" type="double" nillable="true"/>
                     <element name="arrivingCity" type="string" nillable="true"/>
                     <element name="meals" type="string" nillable="true"/>
-                    <element name="departinDate" type="dateTime" nillable="true"/>
-                    <element name="departinCity" type="string" nillable="true"/>
+                    <element name="departingDate" type="dateTime" nillable="true"/>
+                    <element name="departingCity" type="string" nillable="true"/>
                     <element name="number" type="int"/>
                 </sequence>
             </complexType>
@@ -49,9 +49,9 @@
             <element name="searchFlightElement">
                 <complexType>
                     <sequence>
-                        <element name="departinCity" type="string" nillable="true"/>
+                        <element name="departingCity" type="string" nillable="true"/>
                         <element name="arrivingCity" type="string" nillable="true"/>
-                        <element name="departinDate" type="dateTime" nillable="true"/>
+                        <element name="departingDate" type="dateTime" nillable="true"/>
                         <element name="cabin" type="string" nillable="true"/>
                         <element name="PromotionCode" type="string" nillable="true"/>
                     </sequence>

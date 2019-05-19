@@ -22,6 +22,10 @@ public class AirlineClient extends WebServiceGatewaySupport {
     @Qualifier(value = "aaSoapClient")
     AirlineClient aaSoapClient;
 
+    @Autowired
+    @Qualifier(value = "aviancaSoapClient")
+    AirlineClient aviancaSoapClient;
+
     //region AA Airline
     public SearchFlightResponseElement searchAaFlight(@NotNull SearchFlightElement request) {
         SearchFlightResponseElement response = (SearchFlightResponseElement) aaSoapClient.getWebServiceTemplate()
@@ -46,9 +50,9 @@ public class AirlineClient extends WebServiceGatewaySupport {
 
     //region Avianca Airline
     public ConsultarVueloResponseElement searchAviancaFlight(@NotNull ConsultarVueloElement request) {
-        ConsultarVueloResponseElement response = (ConsultarVueloResponseElement) getWebServiceTemplate()
+        ConsultarVueloResponseElement response = (ConsultarVueloResponseElement) aviancaSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
+                        "http://127.0.0.1:8088/mockServicioAviancaVuelosSoapHttp",
                         request
                 );
 
@@ -56,9 +60,9 @@ public class AirlineClient extends WebServiceGatewaySupport {
     }
 
     public ReservarVueloResponseElement bookAviancaFlight(@NotNull ReservarVueloElement request) {
-        ReservarVueloResponseElement response = (ReservarVueloResponseElement) getWebServiceTemplate()
+        ReservarVueloResponseElement response = (ReservarVueloResponseElement) aviancaSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
+                        "http://127.0.0.1:8088/mockServicioAviancaVuelosSoapHttp",
                         request
                 );
 
