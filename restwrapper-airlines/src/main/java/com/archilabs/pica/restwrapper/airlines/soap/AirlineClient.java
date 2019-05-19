@@ -1,9 +1,9 @@
 package com.archilabs.pica.restwrapper.airlines.soap;
 
-import models.wsdl.BookFligthElement;
-import models.wsdl.BookFligthResponseElement;
-import models.wsdl.SearchFlightElement;
-import models.wsdl.SearchFlightResponseElement;
+import com.aa.services.types.BookFligthElement;
+import com.aa.services.types.BookFligthResponseElement;
+import com.aa.services.types.SearchFlightElement;
+import com.aa.services.types.SearchFlightResponseElement;
 import org.springframework.stereotype.Component;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 

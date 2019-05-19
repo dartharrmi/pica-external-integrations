@@ -1,8 +1,8 @@
 package com.archilabs.pica.restwrapper.airlines.service;
 
+import com.aa.services.types.*;
 import com.archilabs.pica.restwrapper.airlines.model.FlightDTO;
 import com.archilabs.pica.restwrapper.airlines.soap.AirlineClient;
-import models.wsdl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;

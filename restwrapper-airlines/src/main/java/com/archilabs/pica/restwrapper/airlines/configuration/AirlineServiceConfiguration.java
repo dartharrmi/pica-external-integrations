@@ -11,7 +11,7 @@ public class AirlineServiceConfiguration {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("models.wsdl");
+        marshaller.setContextPath("com.aa.services.types");
         return marshaller;
     }
 

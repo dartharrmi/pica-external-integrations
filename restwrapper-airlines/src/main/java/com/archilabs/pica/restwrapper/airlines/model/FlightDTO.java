@@ -1,6 +1,6 @@
 package com.archilabs.pica.restwrapper.airlines.model;
 
-import models.wsdl.Flight;
+import com.aa.services.types.Flight;
 
 import java.time.LocalDate;
 import java.util.Objects;
