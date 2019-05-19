@@ -21,8 +21,9 @@ public class AirlinesService implements IAirlinesService {
     @Autowired
     private AirlineClient airlineClient;
 
-    public List<FlightDTO> getFlights(String departingCity, LocalDate departingDate,
-                                      String arrivingCity, String cabin, @Nullable String promotionCode) throws DatatypeConfigurationException {
+    //region AA Airlines
+    public List<FlightDTO> searchAaFlight(String departingCity, LocalDate departingDate,
+                                          String arrivingCity, String cabin, @Nullable String promotionCode) throws DatatypeConfigurationException {
         SearchFlightElement request = new SearchFlightElement();
         request.setDepartinCity(departingCity);
         request.setDepartinDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(departingDate.atStartOfDay(ZoneId.systemDefault()))));
@@ -31,7 +32,7 @@ public class AirlinesService implements IAirlinesService {
         request.setPromotionCode(promotionCode);
 
         List<FlightDTO> flights = new ArrayList<>();
-        SearchFlightResponseElement responseElement = airlineClient.GetSearchFlightResponse(request);
+        SearchFlightResponseElement responseElement = airlineClient.searchAaFlight(request);
         for (Trip trip : responseElement.getResult()) {
             for (Flight flight : trip.getFlights()) {
                 flights.add(FlightDTO.fromFlight(flight));
@@ -41,7 +42,7 @@ public class AirlinesService implements IAirlinesService {
         return flights;
     }
 
-    public Boolean bookFlight(FlightDTO flightDto, String passengerName) throws DatatypeConfigurationException {
+    public Boolean bookAaFlight(FlightDTO flightDto, String passengerName) throws DatatypeConfigurationException {
         Flight flight = new Flight();
         flight.setArrivingCity(flight.getArrivingCity());
         flight.setArrivingDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(flightDto.getArrivingDate().atStartOfDay(ZoneId.systemDefault()))));
@@ -56,7 +57,8 @@ public class AirlinesService implements IAirlinesService {
         soapRequest.setF(flight);
         soapRequest.setPassengerName(passengerName);
 
-        BookFligthResponseElement responseElement = airlineClient.GetBookFlightResponse(soapRequest);
+        BookFligthResponseElement responseElement = airlineClient.bookAaFlight(soapRequest);
         return responseElement.isResult();
     }
+    //endregion
 }

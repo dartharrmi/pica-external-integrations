@@ -21,14 +21,15 @@ public class AirlineController {
     private AirlinesService airlinesService;
 
     @GetMapping("/search")
-    public ResponseEntity<List<FlightDTO>> getAllFlights(@RequestParam("departingCity") String departingCity,
-                                                         @RequestParam("departingDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departingDate,
-                                                         @RequestParam("arrivingCity") String arrivingCity,
-                                                         @RequestParam("cabin") String cabin,
-                                                         @RequestParam(value = "promotionCode", required = false) String promotionCode) {
+    public ResponseEntity<List<FlightDTO>> bookAaFlight(@RequestParam("departingCity") String departingCity,
+                                                        @RequestParam("departingDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departingDate,
+                                                        @RequestParam("arrivingCity") String arrivingCity,
+                                                        @RequestParam("cabin") String cabin,
+                                                        @RequestParam(value = "promotionCode", required = false) String promotionCode,
+                                                        @RequestParam("airline") String airline) {
         ResponseEntity<List<FlightDTO>> response;
         try {
-            List<FlightDTO> flights = airlinesService.getFlights(departingCity, departingDate, arrivingCity, cabin, promotionCode);
+            List<FlightDTO> flights = airlinesService.searchAaFlight(departingCity, departingDate, arrivingCity, cabin, promotionCode);
 
             if (!flights.isEmpty()) {
                 response = new ResponseEntity<>(flights, HttpStatus.OK);
@@ -45,10 +46,10 @@ public class AirlineController {
     }
 
     @PostMapping("bookFlight")
-    public ResponseEntity<Boolean> bookFlight(@RequestBody BookFlightRequest bookFlightRequest) {
+    public ResponseEntity<Boolean> bookAaFlight(@RequestBody BookFlightRequest bookFlightRequest) {
         ResponseEntity<Boolean> response;
         try {
-            response = new ResponseEntity<>(airlinesService.bookFlight(bookFlightRequest.flightDTO, bookFlightRequest.passengerName), HttpStatus.OK);
+            response = new ResponseEntity<>(airlinesService.bookAaFlight(bookFlightRequest.flightDTO, bookFlightRequest.passengerName), HttpStatus.OK);
         } catch (DatatypeConfigurationException e) {
             response = new ResponseEntity<>(false, HttpStatus.INTERNAL_SERVER_ERROR);
         }
