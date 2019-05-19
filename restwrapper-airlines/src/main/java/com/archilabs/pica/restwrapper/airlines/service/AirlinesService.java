@@ -18,12 +18,8 @@ import java.util.List;
 @Service
 public class AirlinesService implements IAirlinesService {
 
-    private final AirlineClient airlineClient;
-
     @Autowired
-    public AirlinesService(AirlineClient airlineClient) {
-        this.airlineClient = airlineClient;
-    }
+    private AirlineClient airlineClient;
 
     public List<FlightDTO> getFlights(String departingCity, LocalDate departingDate,
                                       String arrivingCity, String cabin, @Nullable String promotionCode) throws DatatypeConfigurationException {

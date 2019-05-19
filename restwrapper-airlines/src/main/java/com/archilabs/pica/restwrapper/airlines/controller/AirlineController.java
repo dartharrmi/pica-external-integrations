@@ -4,6 +4,7 @@ import com.archilabs.pica.restwrapper.airlines.model.FlightDTO;
 import com.archilabs.pica.restwrapper.airlines.model.request.BookFlightRequest;
 import com.archilabs.pica.restwrapper.airlines.service.AirlinesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,19 +17,15 @@ import java.util.List;
 @RequestMapping("/airlines")
 public class AirlineController {
 
-    private AirlinesService airlinesService;
-
     @Autowired
-    public AirlineController(AirlinesService airlinesService) {
-        this.airlinesService = airlinesService;
-    }
+    private AirlinesService airlinesService;
 
     @GetMapping("/search")
     public ResponseEntity<List<FlightDTO>> getAllFlights(@RequestParam("departingCity") String departingCity,
-                                                         @RequestParam("departingDate") LocalDate departingDate,
+                                                         @RequestParam("departingDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departingDate,
                                                          @RequestParam("arrivingCity") String arrivingCity,
                                                          @RequestParam("cabin") String cabin,
-                                                         @RequestParam("promotionCode") String promotionCode) {
+                                                         @RequestParam(value = "promotionCode", required = false) String promotionCode) {
         ResponseEntity<List<FlightDTO>> response;
         try {
             List<FlightDTO> flights = airlinesService.getFlights(departingCity, departingDate, arrivingCity, cabin, promotionCode);

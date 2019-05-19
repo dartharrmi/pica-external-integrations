@@ -1,5 +1,6 @@
 package com.archilabs.pica.restwrapper.airlines.configuration;
 
+import com.archilabs.pica.restwrapper.airlines.soap.AirlineClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -12,5 +13,13 @@ public class AirlineServiceConfiguration {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath("models.wsdl");
         return marshaller;
+    }
+
+    @Bean
+    public AirlineClient airlineClient(Jaxb2Marshaller jaxb2Marshaller) {
+        AirlineClient client = new AirlineClient();
+        client.setMarshaller(jaxb2Marshaller);
+        client.setUnmarshaller(jaxb2Marshaller);
+        return client;
     }
 }

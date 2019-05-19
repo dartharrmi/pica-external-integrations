@@ -15,7 +15,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     public SearchFlightResponseElement GetSearchFlightResponse(@NotNull SearchFlightElement request) {
         SearchFlightResponseElement response = (SearchFlightResponseElement) getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://0.0.0.0:8080/castlemock/mock/soap/project/zdWrWV/AAFlightsServiceSoapHttpMock",
+                        "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
                         request
                 );
 
@@ -25,7 +25,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     public BookFligthResponseElement GetBookFlightResponse(@NotNull BookFligthElement request) {
         BookFligthResponseElement response = (BookFligthResponseElement) getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://0.0.0.0:8080/castlemock/mock/soap/project/zdWrWV/AAFlightsServiceSoapHttpMock",
+                        "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
                         request
                 );
 

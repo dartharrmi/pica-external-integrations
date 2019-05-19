@@ -5,10 +5,12 @@ import com.archilabs.pica.integrations.model.Hotel;
 import com.archilabs.pica.integrations.model.Room;
 import com.archilabs.pica.integrations.model.TouresBalonReservation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.Response;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,8 +26,11 @@ public class HotelController {
     }
 
     @GetMapping("/all")
-    public List<Hotel> getAllHotels() {
-        return hotelService.findAllHotels();
+    public ResponseEntity<List<Hotel>> getAllHotels() {
+        // HttpHeaders headers = new HttpHeaders();
+        // headers.add("Access-Control-Allow-Origin", "http://localhost:8080");
+
+        return new ResponseEntity<>(hotelService.findAllHotels(), HttpStatus.OK);
     }
 
     @GetMapping("/{hotelId}")
