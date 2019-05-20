@@ -95,6 +95,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.ws:spring-ws-core'
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
     runtimeOnly 'org.springframework.boot:spring-boot-devtools'
     //compile(files(genJaxb.classesDir).builtBy(genJaxb))
 

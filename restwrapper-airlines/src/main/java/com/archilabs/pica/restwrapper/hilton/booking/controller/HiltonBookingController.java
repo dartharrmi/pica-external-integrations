@@ -2,6 +2,10 @@ package com.archilabs.pica.restwrapper.hilton.booking.controller;
 
 import com.archilabs.pica.restwrapper.hilton.booking.model.BookingRequest;
 import com.archilabs.pica.restwrapper.hilton.booking.service.HiltonBookingService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hilton")
+@Api(value = "Set of endpoints for booking a room in Hilton hotels")
 public class HiltonBookingController {
 
     private final HiltonBookingService hiltonBookingService;
@@ -20,6 +25,11 @@ public class HiltonBookingController {
     }
 
     @PostMapping("booking")
+    @ApiOperation(value = "Books a room", produces = "application/text")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Status of the booking request", response = Boolean.class),
+            @ApiResponse(code = 500, message = ""),
+    })
     public ResponseEntity<Boolean> book(@RequestBody BookingRequest bookingRequest) {
         ResponseEntity<Boolean> response;
         try {

@@ -2,19 +2,37 @@ package com.archilabs.pica.restwrapper.airlines.model;
 
 import com.aa.services.types.Flight;
 import com.avianca.servicios.types.Vuelo;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
+@ApiModel(description = "Class that holds all of the details for booking a flight")
 public class FlightDTO {
 
+    @ApiModelProperty(notes = "Type of cabin for the flight", example = "Economy Plus", required = true, position = 1)
     private String cabin;
+
+    @ApiModelProperty(notes = "Desired date of arrival in ISO format", example = "2019-05-20", required = true, position = 2)
     private LocalDate arrivingDate;
+
+    @ApiModelProperty(notes = "Price to be paid", example = "255000", required = true, position = 3)
     private Double price;
+
+    @ApiModelProperty(notes = "City of arrival", example = "BOG", required = true, position = 4)
     private String arrivingCity;
+
+    @ApiModelProperty(notes = "Some airlines offer meals during the flight, this is the field that holds that information", example = "Lunch", required = true, position = 5)
     private String meals;
+
+    @ApiModelProperty(notes = "Desired date of departure in ISO format", example = "2019-05-20", required = true, position = 6)
     private LocalDate departingDate;
+
+    @ApiModelProperty(notes = "City of departure", example = "BAQ", required = true, position = 7)
     private String departingCity;
+
+    @ApiModelProperty(notes = "Unique identifier of the flight", example = "AV1234", required = true, position = 8)
     private String number;
 
     public static FlightDTO fromFlight(Flight flight) {
@@ -26,7 +44,8 @@ public class FlightDTO {
         flightDTO.arrivingCity = flight.getArrivingCity();
         flightDTO.meals = flight.getMeals();
         if (flight.getDepartingDate() != null) {
-            flightDTO.departingDate = flight.getDepartingDate().toGregorianCalendar().toZonedDateTime().toLocalDate();        }
+            flightDTO.departingDate = flight.getDepartingDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
+        }
         if (flight.getDepartingCity() != null) {
             flightDTO.departingCity = flight.getDepartingCity();
         }
