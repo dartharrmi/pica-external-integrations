@@ -76,7 +76,9 @@ wsdl2java{
     wsdlsToGenerate = [
             [file("${projectDir}/src/main/resources/wsdl/AAFlightsService.wsdl")],
             [file("${projectDir}/src/main/resources/wsdl/ServicioAviancaVuelos.wsdl")],
-            [file("${projectDir}/src/main/resources/wsdl/CreditCardService.wsdl")]
+            [file("${projectDir}/src/main/resources/wsdl/CreditCardService.wsdl")],
+            [file("${projectDir}/src/main/resources/wsdl/HiltonBookingService.wsdl")],
+            [file("${projectDir}/src/main/resources/wsdl/HiltonRoomService.wsdl")]
     ]
 }
 

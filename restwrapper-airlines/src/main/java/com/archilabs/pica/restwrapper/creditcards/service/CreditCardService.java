@@ -2,8 +2,8 @@ package com.archilabs.pica.restwrapper.creditcards.service;
 
 import com.archilabs.pica.restwrapper.creditcards.model.CreditCardRequest;
 import com.archilabs.pica.restwrapper.creditcards.soap.CreditCardClient;
-import com.creditverifier.services.types.ChargeCreditCardElement;
-import com.creditverifier.services.types.VerifyCreditCardElement;
+import com.creditverifier.services.ChargeCreditCardElement;
+import com.creditverifier.services.VerifyCreditCardElement;
 import com.creditverifier.services.types.CreditCard;
 import org.springframework.stereotype.Service;
 
