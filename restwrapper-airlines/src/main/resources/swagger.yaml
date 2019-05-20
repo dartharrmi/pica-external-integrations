@@ -1,0 +1,430 @@
+swagger: '2.0'
+info:
+  description: Soap wrappers for communication with ledacy and third party systems
+  version: 1.0.0
+  title: Pica Integrations - Soap Wrappers
+  contact:
+    name: Miguel Arroyo
+    url: 'https://github.com/dartharrmi/pica-external-integrations'
+    email: ma_arroyos@javeriana.edu.co
+host: '127.0.0.1:8087'
+basePath: /pica/integrations
+tags:
+  - name: airline-controller
+    description: Airline Controller
+  - name: credit-card-controller
+    description: Credit Card Controller
+  - name: hilton-rooms-controller
+    description: Hilton Rooms Controller
+  - name: hilton-booking-controller
+    description: Hilton Booking Controller
+paths:
+  /airlines/bookFlight:
+    post:
+      tags:
+        - airline-controller
+      summary: Books a flight
+      operationId: bookFlightUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+        - application/text
+      parameters:
+        - in: body
+          name: bookFlightRequest
+          description: JSON representing the booking request
+          required: true
+          schema:
+            $ref: '#/definitions/BookFlightRequest'
+      responses:
+        '200':
+          description: Status of the booking request
+          schema:
+            type: string
+        '500':
+          description: Internal server error
+  /airlines/search:
+    get:
+      tags:
+        - airline-controller
+      summary: Gets the list of flights available
+      operationId: searchFlightUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+        - application/json;charset=UTF-8
+      parameters:
+        - name: departingCity
+          in: query
+          description: Code for the departing city
+          required: true
+          type: string
+        - name: departingDate
+          in: query
+          description: Desired departing city in ISO
+          required: true
+          type: string
+          format: date
+        - name: arrivingCity
+          in: query
+          description: Code for the arrival city
+          required: true
+          type: string
+        - name: cabin
+          in: query
+          description: Type of cabin for the flight
+          required: true
+          type: string
+        - name: promotionCode
+          in: query
+          description: Promotion code apply discounts and offers
+          required: false
+          type: string
+        - name: airline
+          in: query
+          description: Code of the airline offering the flight
+          required: true
+          type: string
+          enum:
+            - AV
+            - AA
+      responses:
+        '200':
+          description: List of available flights
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/FlightDTO'
+        '400':
+          description: >-
+            Bad Request, usually because any of the parameters do not comply
+            with the expected format
+        '500':
+          description: Internal server error
+  /creditcard/charge:
+    post:
+      tags:
+        - credit-card-controller
+      summary: chargeCreditCard
+      operationId: chargeCreditCardUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        - in: body
+          name: creditCardRequest
+          description: >-
+            JSON that holds the required information for charging the credit
+            card
+          required: true
+          schema:
+            $ref: '#/definitions/CreditCardRequest'
+      responses:
+        '200':
+          description: Status of charge request
+          schema:
+            type: string
+        '201':
+          description: Created
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  /creditcard/verify:
+    post:
+      tags:
+        - credit-card-controller
+      summary: Verifies the credit card by charging a small amount
+      operationId: verifyCreditCardUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+        - application/text
+      parameters:
+        - in: body
+          name: creditCardRequest
+          description: >-
+            JSON that holds the required information for verifying the credit
+            card
+          required: true
+          schema:
+            $ref: '#/definitions/CreditCardRequest'
+      responses:
+        '200':
+          description: Status of the verification request
+          schema:
+            type: string
+        '201':
+          description: Created
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  /hilton/booking:
+    post:
+      tags:
+        - hilton-booking-controller
+      summary: Books a room
+      operationId: bookUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+        - application/text
+      parameters:
+        - in: body
+          name: bookingRequest
+          description: bookingRequest
+          required: true
+          schema:
+            $ref: '#/definitions/BookingRequest'
+      responses:
+        '200':
+          description: Status of the booking request
+          schema:
+            type: boolean
+        '500':
+          description: Internal server error
+  /hilton/rooms:
+    get:
+      tags:
+        - hilton-rooms-controller
+      summary: Search available rooms
+      operationId: bookUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+        - application/text
+      parameters:
+        - in: body
+          name: roomsRequest
+          description: roomsRequest
+          required: true
+          schema:
+            $ref: '#/definitions/GetRoomsRequest'
+      responses:
+        '200':
+          description: List of available rooms
+          schema:
+            $ref: '#/definitions/Room'
+        '500':
+          description: Internal server error
+definitions:
+  BookFlightRequest:
+    type: object
+    properties:
+      airline:
+        type: string
+        description: Details of the airline
+        enum:
+          - AA
+          - AVIANCA
+      flightDTO:
+        description: Details of the flight to be booked
+        $ref: '#/definitions/FlightDTO'
+      passenger:
+        description: Details of the passenger booking the flight
+        $ref: '#/definitions/Passenger'
+    description: >-
+      Class representing the request to be done for booking a flight in the
+      system.
+  BookingRequest:
+    type: object
+    required:
+      - checkin
+      - checkout
+      - guestName
+      - hotel
+      - roomNumber
+    properties:
+      guestName:
+        type: string
+        example: Arya Stark
+        description: Name of the guest
+      hotel:
+        type: string
+        example: Hilton 93
+        description: Hotel
+      roomNumber:
+        type: integer
+        format: int32
+        example: 101
+        description: Number of the room to book
+      checkout:
+        type: string
+        format: date
+        example: '2019-05-20'
+        description: Checkout date in ISO format
+      checkin:
+        type: string
+        format: date
+        example: '2019-05-20'
+        description: Checkin date in ISO format
+    description: Class representing the request to be done for booking a room.
+  CreditCardRequest:
+    type: object
+    required:
+      - mount
+      - number
+      - type
+    properties:
+      type:
+        type: string
+        example: Visa
+        description: Type of the credit card
+      mount:
+        type: number
+        format: double
+        example: Visa
+        description: >-
+          Amount to be charged to the credit card, when doing verifications it's
+          recommended that this amount does not exceed $3500 COP
+      number:
+        type: string
+        example: '4593000000000000'
+        description: Number of the credit card
+    description: >-
+      Class representing the request to be done for verifying and charging
+      credit cards.
+  FlightDTO:
+    type: object
+    required:
+      - arrivingCity
+      - arrivingDate
+      - cabin
+      - departingCity
+      - departingDate
+      - meals
+      - number
+      - price
+    properties:
+      cabin:
+        type: string
+        example: Economy Plus
+        description: Type of cabin for the flight
+      arrivingDate:
+        type: string
+        format: date
+        example: '2019-05-20'
+        description: Desired date of arrival in ISO format
+      price:
+        type: number
+        format: double
+        example: 255000
+        description: Price to be paid
+      arrivingCity:
+        type: string
+        example: BOG
+        description: City of arrival
+      meals:
+        type: string
+        example: Lunch
+        description: >-
+          Some airlines offer meals during the flight, this is the field that
+          holds that information
+      departingDate:
+        type: string
+        format: date
+        example: '2019-05-20'
+        description: Desired date of departure in ISO format
+      departingCity:
+        type: string
+        example: BAQ
+        description: City of departure
+      number:
+        type: string
+        example: AV1234
+        description: Unique identifier of the flight
+    description: Class that holds all of the details for booking a flight
+  GetRoomsRequest:
+    type: object
+    required:
+      - checkin
+      - checkout
+      - city
+      - country
+      - rooms
+      - type
+    properties:
+      city:
+        type: string
+        example: BOG
+        description: City of the hotel
+      country:
+        type: string
+        example: CO
+        description: Country of the hotel
+      type:
+        type: string
+        example: Double
+        description: Type of the room to book
+      rooms:
+        type: integer
+        format: int32
+        example: 1
+        description: Number of rooms to book
+      checkout:
+        type: string
+        format: date
+        example: '2019-05-20'
+        description: Desired checkout date in ISO format
+      checkin:
+        type: string
+        format: date
+        example: '2019-05-20'
+        description: Desired checkin date in ISO format
+    description: >-
+      Class representing the request to be done for searching the rooms
+      available.
+  Hotel:
+    type: object
+    properties:
+      address:
+        type: string
+      city:
+        type: string
+      country:
+        type: string
+      name:
+        type: string
+  Passenger:
+    type: object
+    required:
+      - passengerId
+      - passengerName
+    properties:
+      passengerName:
+        type: string
+        example: Sansa Stark
+        description: Name of the passenger booking the flight
+      passengerId:
+        type: integer
+        format: int32
+        example: 1100800400
+        description: Id number of the passenger booking the flight
+    description: Class that holds all of the details of the passenger booking the flight
+  Room:
+    type: object
+    properties:
+      hotel:
+        $ref: '#/definitions/Hotel'
+      number:
+        type: integer
+      price:
+        type: number
+        format: float
+      type:
+        type: string
