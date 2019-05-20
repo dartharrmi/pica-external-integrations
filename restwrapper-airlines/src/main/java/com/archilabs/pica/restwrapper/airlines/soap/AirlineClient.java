@@ -19,8 +19,8 @@ import javax.validation.constraints.NotNull;
 public class AirlineClient extends WebServiceGatewaySupport {
 
     @Autowired
-    @Qualifier(value = "aaSoapClient")
-    AirlineClient aaSoapClient;
+    @Qualifier(value = "americanAirlinesSoapClient")
+    AirlineClient americanAirlinesSoapClient;
 
     @Autowired
     @Qualifier(value = "aviancaSoapClient")
@@ -28,7 +28,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
 
     //region AA Airline
     public SearchFlightResponseElement searchAaFlight(@NotNull SearchFlightElement request) {
-        SearchFlightResponseElement response = (SearchFlightResponseElement) aaSoapClient.getWebServiceTemplate()
+        SearchFlightResponseElement response = (SearchFlightResponseElement) americanAirlinesSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
                         "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
                         request
@@ -38,7 +38,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     }
 
     public BookFligthResponseElement bookAaFlight(@NotNull BookFligthElement request) {
-        BookFligthResponseElement response = (BookFligthResponseElement) aaSoapClient.getWebServiceTemplate()
+        BookFligthResponseElement response = (BookFligthResponseElement) americanAirlinesSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
                         "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
                         request

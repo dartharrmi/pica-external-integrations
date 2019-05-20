@@ -25,8 +25,11 @@ public class FlightDTO {
         flightDTO.price = flight.getPrice();
         flightDTO.arrivingCity = flight.getArrivingCity();
         flightDTO.meals = flight.getMeals();
-        flightDTO.departingDate = flight.getDepartinDate().toGregorianCalendar().toZonedDateTime().toLocalDate();
-        flightDTO.departingCity = flight.getDepartinCity();
+        if (flight.getDepartingDate() != null) {
+            flightDTO.departingDate = flight.getDepartingDate().toGregorianCalendar().toZonedDateTime().toLocalDate();        }
+        if (flight.getDepartingCity() != null) {
+            flightDTO.departingCity = flight.getDepartingCity();
+        }
         flightDTO.number = String.valueOf(flight.getNumber());
 
         return flightDTO;

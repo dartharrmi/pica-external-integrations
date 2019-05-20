@@ -29,8 +29,8 @@ public class AirlinesService implements IAirlinesService {
     public List<FlightDTO> searchAaFlight(String departingCity, LocalDate departingDate,
                                           String arrivingCity, String cabin, @Nullable String promotionCode) throws DatatypeConfigurationException {
         SearchFlightElement request = new SearchFlightElement();
-        request.setDepartinCity(departingCity);
-        request.setDepartinDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(departingDate.atStartOfDay(ZoneId.systemDefault()))));
+        request.setDepartingCity(departingCity);
+        request.setDepartingDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(departingDate.atStartOfDay(ZoneId.systemDefault()))));
         request.setArrivingCity(arrivingCity);
         request.setCabin(cabin);
         request.setPromotionCode(promotionCode);
@@ -50,8 +50,8 @@ public class AirlinesService implements IAirlinesService {
         Flight flight = new Flight();
         flight.setArrivingCity(flight.getArrivingCity());
         flight.setArrivingDate(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(flightDto.getArrivingDate().atStartOfDay(ZoneId.systemDefault()))));
-        flight.setDepartinCity(flight.getDepartinCity());
-        flight.setDepartinDate(flight.getDepartinDate());
+        flight.setDepartingCity(flight.getDepartingCity());
+        flight.setDepartingDate(flight.getDepartingDate());
         flight.setCabin(flight.getCabin());
         flight.setMeals(flightDto.getMeals());
         flight.setNumber(Integer.parseInt(flightDto.getNumber()));

@@ -1,0 +1,122 @@
+<definitions
+     name="CreditCardService"
+     targetNamespace="http://services.creditverifier.com/"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://services.creditverifier.com/"
+     xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+     xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+     xmlns:tns0="http://services.creditverifier.com/types/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.creditverifier.com/"
+             elementFormDefault="qualified" xmlns:tns="http://services.creditverifier.com/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://services.creditverifier.com/types/">
+            <import namespace="http://services.creditverifier.com/types/"/>
+            <complexType name="CreditCardValidationFaultMessage">
+                <sequence>
+                    <element name="error" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="chargeCreditCardElement">
+                <complexType>
+                    <sequence>
+                        <element name="cc" type="ns1:CreditCard" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="chargeCreditCardResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="boolean"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="CreditCardValidationFaultMessageElement" type="tns:CreditCardValidationFaultMessage"/>
+            <element name="verifyCreditCardElement">
+                <complexType>
+                    <sequence>
+                        <element name="cc" type="ns1:CreditCard" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="verifyCreditCardResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="boolean"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.creditverifier.com/types/"
+             elementFormDefault="qualified" xmlns:tns="http://services.creditverifier.com/types/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/">
+            <import namespace="http://services.creditverifier.com/"/>
+            <complexType name="CreditCard">
+                <sequence>
+                    <element name="type" type="string" nillable="true"/>
+                    <element name="mount" type="double" nillable="true"/>
+                    <element name="number" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+        </schema>
+    </types>
+    <message name="CreditCardService_chargeCreditCard">
+        <part name="parameters" element="tns:chargeCreditCardElement"/>
+    </message>
+    <message name="CreditCardService_chargeCreditCardResponse">
+        <part name="parameters" element="tns:chargeCreditCardResponseElement"/>
+    </message>
+    <message name="CreditCardValidationFaultMessage">
+        <part name="CreditCardValidationFaultMessageElement" element="tns:CreditCardValidationFaultMessageElement"/>
+    </message>
+    <message name="CreditCardService_verifyCreditCard">
+        <part name="parameters" element="tns:verifyCreditCardElement"/>
+    </message>
+    <message name="CreditCardService_verifyCreditCardResponse">
+        <part name="parameters" element="tns:verifyCreditCardResponseElement"/>
+    </message>
+    <portType name="CreditCardService">
+        <operation name="chargeCreditCard">
+            <input message="tns:CreditCardService_chargeCreditCard"/>
+            <output message="tns:CreditCardService_chargeCreditCardResponse"/>
+            <fault name="CreditCardValidationFaultMessage" message="tns:CreditCardValidationFaultMessage"/>
+        </operation>
+        <operation name="verifyCreditCard">
+            <input message="tns:CreditCardService_verifyCreditCard"/>
+            <output message="tns:CreditCardService_verifyCreditCardResponse"/>
+        </operation>
+    </portType>
+    <binding name="CreditCardServiceSoapHttp" type="tns:CreditCardService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="chargeCreditCard">
+            <soap:operation soapAction="http://services.creditverifier.com//chargeCreditCard"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="CreditCardValidationFaultMessage">
+                <soap:fault name="CreditCardValidationFaultMessage" use="literal" encodingStyle=""/>
+            </fault>
+        </operation>
+        <operation name="verifyCreditCard">
+            <soap:operation soapAction="http://services.creditverifier.com//verifyCreditCard"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="CreditCardService">
+        <port name="CreditCardServiceSoapHttpPort" binding="tns:CreditCardServiceSoapHttp">
+            <soap:address location="http://192.168.1.100:8888/TuresBalonProviders-CreditVerifier-context-root/CreditCardServiceSoapHttpPort"/>
+        </port>
+    </service>
+</definitions>

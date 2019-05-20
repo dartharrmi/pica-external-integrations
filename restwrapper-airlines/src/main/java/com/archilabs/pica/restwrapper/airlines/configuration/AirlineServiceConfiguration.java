@@ -17,7 +17,7 @@ public class AirlineServiceConfiguration {
     }
 
     @Bean
-    public AirlineClient aaSoapClient(Jaxb2Marshaller aaMarshaller) {
+    public AirlineClient americanAirlinesSoapClient(Jaxb2Marshaller aaMarshaller) {
         AirlineClient client = new AirlineClient();
         client.setMarshaller(aaMarshaller);
         client.setUnmarshaller(aaMarshaller);
