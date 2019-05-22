@@ -1,13 +1,26 @@
 package com.archilabs.pica.bolivariano.model.request;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.util.Objects;
 
+@ApiModel(description = "Class that holds all of the details for a booking request in Bolivariano")
 public class BookingRequest {
 
+    @ApiModelProperty(notes = "Last name of the passenger", example = "Lannister", required = true, position = 1)
     private String lastName;
+
+    @ApiModelProperty(notes = "Name of the passenger", example = "Tyrion", required = true, position = 2)
     private String name;
+
+    @ApiModelProperty(notes = "Departure date in format ddMMYYY", example = "22052019", required = true, position = 3)
     private String departureDate;
+
+    @ApiModelProperty(notes = "Trip number", example = "2012", required = true, position = 4)
     private String tripNumber;
+
+    @ApiModelProperty(notes = "Seat number", example = "2", required = true, position = 5, allowableValues = "range[1, 20]")
     private String seatNumber;
 
     public BookingRequest() {
