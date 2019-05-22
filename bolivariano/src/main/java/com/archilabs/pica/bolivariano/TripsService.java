@@ -1,5 +1,7 @@
 package com.archilabs.pica.bolivariano;
 
+import com.archilabs.pica.bolivariano.exceptions.BookingTripException;
+import com.archilabs.pica.bolivariano.exceptions.ConnectionNotClosedException;
 import com.archilabs.pica.bolivariano.exceptions.TripsFileNotFoundException;
 import com.archilabs.pica.bolivariano.exceptions.ftp.FtpException;
 import com.archilabs.pica.bolivariano.ftp.FtpService;
@@ -41,7 +43,7 @@ public class TripsService {
         ftpService.downloadFileFromFTP(ftpRelativePath, copyToPath);
     }
 
-    public List<Trip> getTrips(String departureCity, String arrivalCity, String time) throws TripsFileNotFoundException {
+    public List<Trip> getTrips(String departureCity, String arrivalCity, String time) throws TripsFileNotFoundException, ConnectionNotClosedException {
         List<Trip> trips = new ArrayList<>();
 
         try {
@@ -62,9 +64,9 @@ public class TripsService {
 
             reader.close();
         } catch (FileNotFoundException e) {
-            throw new TripsFileNotFoundException("Trips file not found, make sure to connect to Bolivariano and retrieve the latest version");
+            throw new TripsFileNotFoundException("Error retrieving the trips from Bolivariano, please try again later");
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new ConnectionNotClosedException("Error stablishing the communication with Bolivariano, please try again later");
         }
 
         return trips;
@@ -83,7 +85,7 @@ public class TripsService {
         return trip;
     };
 
-    public void bookTrip(BookingRequest request) throws IOException, FtpException {
+    public void bookTrip(BookingRequest request) throws BookingTripException, FtpException {
         String orderMillisCreation = String.valueOf(System.currentTimeMillis());
         String orderId = orderMillisCreation.substring(orderMillisCreation.length() - 4);
 
@@ -102,7 +104,9 @@ public class TripsService {
             writer.close();
 
             ftpService.uploadFileToFTP(tempFile, "orders", tempFile.getName());
-        } catch (IOException | FtpException e) {
+        } catch (IOException e) {
+            throw new BookingTripException("An error ocurred booking the trip, please try again later");
+        } catch (FtpException e) {
             throw e;
         }
     }
