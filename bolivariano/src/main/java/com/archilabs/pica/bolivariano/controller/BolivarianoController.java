@@ -9,7 +9,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -22,8 +25,10 @@ public class BolivarianoController {
         this.tripsService = tripsService;
 
         try {
+            String date = new SimpleDateFormat("ddMMYYYY").format(new Date());
+
             tripsService.connectToFtp("127.0.0.1", "touresbalon", "qwerty");
-            //tripsService.retrieveTripsForTheDay("Bolivariano_consultar_disponibles.csv", Paths.get("").toAbsolutePath().toString() + "\\availableTrips.csv");
+            tripsService.retrieveTripsForTheDay("Bolivariano_consultar_disponibles.csv", Paths.get("").toAbsolutePath().toString() + "\\viajes" + date + ".csv");
         } catch (FtpException e) {
             System.exit(-1);
         }
@@ -42,7 +47,8 @@ public class BolivarianoController {
     }
 
     @PostMapping("booking")
-    public ResponseEntity<Boolean> booking(@RequestBody BookingRequest bookingRequest) {
+    public ResponseEntity<Boolean> booking(@RequestBody BookingRequest bookingRequest) throws IOException, FtpException {
+        tripsService.bookTrip(bookingRequest);
         return new ResponseEntity<>(true, HttpStatus.OK);
     }
 }

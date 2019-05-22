@@ -10,6 +10,9 @@ public class BookingRequest {
     private String tripNumber;
     private String seatNumber;
 
+    public BookingRequest() {
+    }
+
     public BookingRequest(String lastName, String name, String departureDate, String tripNumber, String seatNumber) {
         this.lastName = lastName;
         this.name = name;
