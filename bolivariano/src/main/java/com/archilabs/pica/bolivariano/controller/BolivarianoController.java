@@ -1,6 +1,8 @@
 package com.archilabs.pica.bolivariano.controller;
 
 import com.archilabs.pica.bolivariano.TripsService;
+import com.archilabs.pica.bolivariano.exceptions.BookingTripException;
+import com.archilabs.pica.bolivariano.exceptions.ConnectionNotClosedException;
 import com.archilabs.pica.bolivariano.exceptions.TripsFileNotFoundException;
 import com.archilabs.pica.bolivariano.exceptions.ftp.FtpException;
 import com.archilabs.pica.bolivariano.model.Trip;
@@ -37,7 +39,7 @@ public class BolivarianoController {
     @GetMapping("trips")
     public ResponseEntity<List<Trip>> getTrips(@RequestParam("departureCity") String departureCity,
                                                @RequestParam("arrivalCity") String arrivalCity,
-                                               @RequestParam("departureTime") String departureTime) throws TripsFileNotFoundException {
+                                               @RequestParam("departureTime") String departureTime) throws TripsFileNotFoundException, ConnectionNotClosedException {
         try {
             List<Trip> foundTrips = tripsService.getTrips(departureCity, arrivalCity, departureTime);
             return new ResponseEntity<>(foundTrips, HttpStatus.OK);
@@ -47,7 +49,7 @@ public class BolivarianoController {
     }
 
     @PostMapping("booking")
-    public ResponseEntity<Boolean> booking(@RequestBody BookingRequest bookingRequest) throws IOException, FtpException {
+    public ResponseEntity<Boolean> booking(@RequestBody BookingRequest bookingRequest) throws FtpException, BookingTripException {
         tripsService.bookTrip(bookingRequest);
         return new ResponseEntity<>(true, HttpStatus.OK);
     }
