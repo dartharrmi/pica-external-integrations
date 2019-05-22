@@ -1,4 +1,4 @@
-package com.archilabs.pica.bolivariano.exceptions;
+package com.archilabs.pica.bolivariano.exceptions.ftp;
 
 public class FtpException extends Exception {
 

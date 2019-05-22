@@ -1,22 +1,22 @@
 package com.archilabs.pica.bolivariano.ftp;
 
-import com.archilabs.pica.bolivariano.exceptions.FtpError;
-import com.archilabs.pica.bolivariano.exceptions.FtpException;
+import com.archilabs.pica.bolivariano.exceptions.ftp.FtpError;
+import com.archilabs.pica.bolivariano.exceptions.ftp.FtpException;
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.io.*;
 
-@Service
+@Component
 public class FtpService implements IFtpService {
 
     /**
      * FTP connection handler
      */
-    FTPClient ftpconnection;
+    private FTPClient ftpconnection;
 
     /**
      * Method that implement FTP connection.

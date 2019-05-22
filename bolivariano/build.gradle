@@ -22,7 +22,10 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.ws:spring-ws-core'
+    implementation 'commons-net:commons-net:3.6'
+
     runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 
     compileOnly 'org.projectlombok:lombok'

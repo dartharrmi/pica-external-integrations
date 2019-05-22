@@ -1,6 +1,6 @@
 package com.archilabs.pica.bolivariano.ftp;
 
-import com.archilabs.pica.bolivariano.exceptions.FtpException;
+import com.archilabs.pica.bolivariano.exceptions.ftp.FtpException;
 
 import java.io.File;
 
