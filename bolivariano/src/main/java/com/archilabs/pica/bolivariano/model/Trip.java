@@ -10,6 +10,9 @@ public class Trip {
     private String departureTime;
     private String seatNumber;
 
+    public Trip() {
+    }
+
     public Trip(String tripNumber, String departureCity, String arrivalCity, String departureTime, String seatNumber) {
         this.tripNumber = tripNumber;
         this.departureCity = departureCity;

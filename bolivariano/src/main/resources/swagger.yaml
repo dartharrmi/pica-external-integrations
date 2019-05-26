@@ -1,0 +1,193 @@
+swagger: '2.0'
+info:
+  description: Legacy wrappers for communication with Bolivariano ftp services.
+  version: 1.0.0
+  title: Pica Integrations - Bolivariano
+  contact:
+    name: Miguel Arroyo
+    url: 'https://github.com/dartharrmi/pica-external-integrations'
+    email: ma_arroyos@javeriana.edu.co
+host: '127.0.0.1:8088'
+basePath: /pica/integrations
+tags:
+  - name: bolivariano-controller
+    description: Bolivariano Controller
+paths:
+  /bolivariano/booking:
+    post:
+      tags:
+        - bolivariano-controller
+      summary: Books a trip in Bolivariano
+      operationId: bookingUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - application/text;charset=UTF-8
+        - '*/*'
+      parameters:
+        - in: body
+          name: bookingRequest
+          description: bookingRequest
+          required: true
+          schema:
+            $ref: '#/definitions/BookingRequest'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: boolean
+        '201':
+          description: The booking was successfully completed
+          schema:
+            type: boolean
+        '400':
+          description: >-
+            Bad Request, usually because any of the parameters do not comply
+            with the expected format
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: >-
+            Internal Server Error, usually thrown when happens errors
+            establishing the communication with Bolivariano.
+  /bolivariano/trips:
+    get:
+      tags:
+        - bolivariano-controller
+      summary: Gets the list of trips available
+      operationId: getTripsUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+        - application/json;charset=UTF-8
+      parameters:
+        - name: departureCity
+          in: query
+          description: Departure city
+          required: true
+          type: string
+          enum:
+            - Barranquilla
+            - Bogotá
+            - Cali
+            - Cartagena
+            - Medellin
+        - name: arrivalCity
+          in: query
+          description: Arrival city
+          required: true
+          type: string
+          enum:
+            - Barranquilla
+            - Bogotá
+            - Cali
+            - Cartagena
+            - Medellin
+        - name: departureTime
+          in: query
+          description: Departure time in format HHMM and in military time
+          required: true
+          type: string
+      responses:
+        '200':
+          description: List of available trips
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Trip'
+        '400':
+          description: >-
+            Bad Request, usually because any of the parameters do not comply
+            with the expected format
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Trips not found
+        '500':
+          description: >-
+            Internal Server Error, usually thrown when happens errors
+            establishing the communication with Bolivariano.
+definitions:
+  BookingRequest:
+    type: object
+    required:
+      - departureDate
+      - lastName
+      - name
+      - seatNumber
+      - tripNumber
+    properties:
+      lastName:
+        type: string
+        example: Lannister
+        description: Last name of the passenger
+      name:
+        type: string
+        example: Tyrion
+        description: Name of the passenger
+      departureDate:
+        type: string
+        example: '22052019'
+        description: Departure date in format ddMMYYY
+      tripNumber:
+        type: string
+        example: '2012'
+        description: Trip number
+      seatNumber:
+        type: string
+        example: '2'
+        description: Seat number
+        minLength: 1
+        maxLength: 20
+    description: Class that holds all of the details for a booking request in Bolivariano
+  Trip:
+    type: object
+    required:
+      - arrivalCity
+      - departureCity
+      - departureTime
+      - seatNumber
+      - tripNumber
+    properties:
+      tripNumber:
+        type: string
+        example: '21'
+        description: Number of the trip
+      departureCity:
+        type: string
+        example: Bogotá
+        description: Departure city
+        enum:
+          - Barranquilla
+          - Bogotá
+          - Cali
+          - Cartagena
+          - Medellin
+      arrivalCity:
+        type: string
+        example: Bogotá
+        description: Destination city
+        enum:
+          - Barranquilla
+          - Bogotá
+          - Cali
+          - Cartagena
+          - Medellin
+      departureTime:
+        type: string
+        example: '2350'
+        description: Departure time in format HHMM and in military time
+      seatNumber:
+        type: string
+        example: '2'
+        description: Seat number
+        minLength: 1
+        maxLength: 20
+    description: Class that holds all of the details for booking a trip in Bolivariano
