@@ -15,7 +15,7 @@ public class HiltonBookingClient extends WebServiceGatewaySupport {
     public BookRoomResponseElement bookHiltonRoom(@NotNull BookRoomElement request) {
         return (BookRoomResponseElement) hiltonBookingClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockHiltonBookingServiceSoapHttpp",
+                        "http://127.0.0.1:8089/mockHiltonBookingServiceSoapHttpp",
                         request
                 );
     }
