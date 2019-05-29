@@ -24,7 +24,7 @@ public class HiltonRoomsService implements IHiltonRoomsService {
     }
 
     @Override
-    public List<Room> bookRoom(GetRoomsRequest roomsRequest) throws DatatypeConfigurationException {
+    public List<Room> getRooms(GetRoomsRequest roomsRequest) throws DatatypeConfigurationException {
         HiltonRoomServiceProcessRequest request = new HiltonRoomServiceProcessRequest();
         request.setCheckIn(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(roomsRequest.checkin.atStartOfDay(ZoneId.systemDefault()))));
         request.setCheckOut(DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.from(roomsRequest.checkout.atStartOfDay(ZoneId.systemDefault()))));

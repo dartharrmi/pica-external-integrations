@@ -21,7 +21,7 @@ public class CreditCardClient extends WebServiceGatewaySupport {
 
         return (ChargeCreditCardResponseElement) creditCardClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockCreditCardServiceSoapHttp",
+                        "http://127.0.0.1:8089/mockCreditCardServiceSoapHttp",
                         request,
                         message -> {
                             System.out.println(message.getPayloadResult());
@@ -34,7 +34,7 @@ public class CreditCardClient extends WebServiceGatewaySupport {
 
         return (VerifyCreditCardResponseElement) creditCardClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockCreditCardServiceSoapHttp",
+                        "http://127.0.0.1:8089/mockCreditCardServiceSoapHttp",
                         request,
                         message -> {
                             System.out.println(message.getPayloadResult());

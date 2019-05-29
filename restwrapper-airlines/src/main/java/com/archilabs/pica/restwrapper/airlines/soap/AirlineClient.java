@@ -30,7 +30,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     public SearchFlightResponseElement searchAaFlight(@NotNull SearchFlightElement request) {
         SearchFlightResponseElement response = (SearchFlightResponseElement) aaSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
+                        "http://127.0.0.1:8089/mockAAFlightsServiceSoapHttp",
                         request
                 );
 
@@ -40,7 +40,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     public BookFligthResponseElement bookAaFlight(@NotNull BookFligthElement request) {
         BookFligthResponseElement response = (BookFligthResponseElement) aaSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockAAFlightsServiceSoapHttp",
+                        "http://127.0.0.1:8089/mockAAFlightsServiceSoapHttp",
                         request
                 );
 
@@ -52,7 +52,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     public ConsultarVueloResponseElement searchAviancaFlight(@NotNull ConsultarVueloElement request) {
         ConsultarVueloResponseElement response = (ConsultarVueloResponseElement) aviancaSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockServicioAviancaVuelosSoapHttp",
+                        "http://127.0.0.1:8089/mockServicioAviancaVuelosSoapHttp",
                         request
                 );
 
@@ -62,7 +62,7 @@ public class AirlineClient extends WebServiceGatewaySupport {
     public ReservarVueloResponseElement bookAviancaFlight(@NotNull ReservarVueloElement request) {
         ReservarVueloResponseElement response = (ReservarVueloResponseElement) aviancaSoapClient.getWebServiceTemplate()
                 .marshalSendAndReceive(
-                        "http://127.0.0.1:8088/mockServicioAviancaVuelosSoapHttp",
+                        "http://127.0.0.1:8089/mockServicioAviancaVuelosSoapHttp",
                         request
                 );
 

@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface IHiltonRoomsService {
 
-    List<Room> bookRoom(GetRoomsRequest roomsRequest) throws DatatypeConfigurationException;
+    List<Room> getRooms(GetRoomsRequest roomsRequest) throws DatatypeConfigurationException;
 }
